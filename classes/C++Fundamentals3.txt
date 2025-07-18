@@ -1,0 +1,476 @@
+Delivered-To: muradyanmanvel65@gmail.com
+Received: by 2002:a05:6200:628d:b0:5a9:3124:a43c with SMTP id gp13csp5497476qnb;
+        Wed, 9 Jul 2025 03:51:10 -0700 (PDT)
+X-Received: by 2002:a05:620a:4885:b0:7d3:b28d:9aeb with SMTP id af79cd13be357-7db7db7847amr338329085a.48.1752058270262;
+        Wed, 09 Jul 2025 03:51:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752058270; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kXA4K2uqLU1j2nv0mcajl/ApxOy7URKt8BnCJfpSeAYicsQ3SACs7GTut/8rzlYdYD
+         7WsF8Vc0v/JzBRDna5VVfRjOVow7f91o8+kpj9XcsccITdFM5BDWtXs644wR83V0wxko
+         ExXi4zs6RDq64pf+hkA4rLLxS/9mxnHlNcH0nBpiVbtNfzboNkap1beIYKMtx2pvFFPV
+         Q07RP6dvwwkxLYxkVuO/fRU0Gtc4KuVRBimvppS9f9aCN+sq8shZP+urFHpQo004SYGi
+         SX/GESkbD1ebL5Bsj2wWk1MrTjVe5c/3JVEoeUgy+oLQHotZCABHwMYQj5F5f2KNcihk
+         WOmQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=pndOaFSRqsRJNSGckAWdCvLU8k7lqlXcvrokl78Ue/I=;
+        fh=2N85UJKi3UYSz8m8gKFw4u4ZYxO7IpG9QsLYUg5sqqg=;
+        b=AH2m6zkzOcIbxvzDSblXe9uwvlSTTP2S+4xP6YUjt8YbFQ+r95JcBPV6OflRS4iv6t
+         sCEUWnFcn96BtGSOZw1SbVwJ/3N2elWmswzO//zc9PTGw9fTB1up7BwMc+ehJQ0CXLGA
+         83y8pl9KgVMH0hL011SNTOA0MhuD1Dxiqhuoei0l4oPfy+usJSdfFrqyk4CafyhJ/qaL
+         5IwSttAZqBpTPIsQCYUxOpd4j63749BbV77/ALHtqbIPahBGO7H+z90XKSYRMIga3+LN
+         HSBspuYSIQ3+6BFL2g9Ln/kAhqOj9TstOOaXYMydZTsqzb+EEq+J+h3pw/+5erGpmyB3
+         OduQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=E0ZKArR0;
+       spf=pass (google.com: domain of 3nuluabykadqvehci-husuyfji-dehufboweewbu.sec@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3nUluaBYKADQVehci-hUSUYfji-dehUfboWeeWbU.Sec@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3nUluaBYKADQVehci-hUSUYfji-dehUfboWeeWbU.Sec@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id af79cd13be357-7d5dbdc3e12sor785984185a.6.2025.07.09.03.51.10
+        for <muradyanmanvel65@gmail.com>
+        (Google Transport Security);
+        Wed, 09 Jul 2025 03:51:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3nuluabykadqvehci-husuyfji-dehufboweewbu.sec@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=E0ZKArR0;
+       spf=pass (google.com: domain of 3nuluabykadqvehci-husuyfji-dehufboweewbu.sec@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3nUluaBYKADQVehci-hUSUYfji-dehUfboWeeWbU.Sec@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1752058270; x=1752663070; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=pndOaFSRqsRJNSGckAWdCvLU8k7lqlXcvrokl78Ue/I=;
+        b=E0ZKArR09x23qKDC7Z4DLYyvqyM2nYI0FngYkoCt4n/XWAndgCkCdLFbdtTvJXEv7D
+         8IO9/Sw+BPI4m8n8AW+0KNG52z8EPfJA7M+UDIItaZzeziwrVgtbx1mm7DceKaS+6TId
+         kVZfVtTo+fuxshbBzDEnZENmpAxOd/2+F83zmWUcfebprz7J1cdMSImfD1BVtcBisbnZ
+         1n9WOm8P3mDKG8B2ehKQafNwwA/aYBo8rwBoKG3UvpadhckdQjrkgYT/GIIHD0iz+5xy
+         O0HH6erEDy7Ysc/0fuKgqeZXJIbvlxy07zPzsWWW1m5GAsuEfo6loHOPl6RMpcyfB/PJ
+         l51w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1752058270; x=1752663070;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=pndOaFSRqsRJNSGckAWdCvLU8k7lqlXcvrokl78Ue/I=;
+        b=U108GGVYxQqtcM0FnhnbuBqM4O0mWjC3vSpg4UNSBpeJKas1neMVFfigPxDjOmvM8N
+         sQPVnxyRdS/qAZw+pKR9KCYMlyMLxVcdnLEhgVjVPMiEcZxo+g9IwV4xgK+QnXXJa/YE
+         Cbw5C+ZgbsiCuKzrXMgqM7gQQWFP2vVRRoI89uNrJuwkkxjPSrr5ahZnbvqIJd9QtLly
+         kG8Yzqfod/69O4nWqBcFlEx/gJ3/OPxIm+V7MKUP+Q86TPmLWTUz8vNpf7IYmsgSHXfd
+         BWdTyGHWHQPyo10WsgaEhg3QFqSdpeKooHUk8tokdgfVjp2Laa1BXKTmyqWqCBZKh0tj
+         NLtg==
+X-Gm-Message-State: AOJu0YxW8v8xPwz991jR4voKkBaAY6atKZYEA20fsp600PR4C7ZBBobU
+	dTFiBXHiwcqhjsZMJ4fgTnZZazXNHkJozycnSjOm5IXK/yf2ywAATFb+Qp/Lps5OJTsVP0rP64h
+	Wq7JjvnvdBvuIh4iolkKAmLp01y/kRiFwqa7xyOk=
+X-Google-Smtp-Source: AGHT+IEm+sR+qHu/GPtqJl6FjHz6zv/54xd17tnIqS4PfzaTCa/2o1WTszXv7/IDH2Kl9luGj/AcjecwsUR4MSP10ggTrQ==
+MIME-Version: 1.0
+X-Received: by 2002:a05:620a:838c:b0:7d4:4d55:98fb with SMTP id
+ af79cd13be357-7db7b321c22mr276200085a.3.1752058269794; Wed, 09 Jul 2025
+ 03:51:09 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSfUMS_R41JmfOjp9Xx0ulxIWCg9f4D06rNfZmWWRv_rxPS2_A
+X-GoogleForms-IsConsumerForm: true
+Message-ID: <autogen-java-a33a73e0-29e2-4440-ba61-acb6424b2ac6@google.com>
+Date: Wed, 09 Jul 2025 10:51:09 +0000
+Subject: C++ Fundamentals 3 (vector, iterator)
+From: Google Forms <forms-receipts-noreply@google.com>
+To: muradyanmanvel65@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000cc105b06397cda90"
+
+--000000000000cc105b06397cda90
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIG91dCBDKysgRnVuZGFtZW50YWxz
+IDMgKHZlY3RvciwgaXRlcmF0b3IpDQpIZXJlJ3Mgd2hhdCB3YXMgcmVjZWl2ZWQuDQoNCg0KQysr
+IEZ1bmRhbWVudGFscyAzICh2ZWN0b3IsIGl0ZXJhdG9yKQ0KDQoNCllvdXIgZW1haWwgKG11cmFk
+eWFubWFudmVsNjVAZ21haWwuY29tKSB3YXMgcmVjb3JkZWQgd2hlbiB5b3Ugc3VibWl0dGVkICAN
+CnRoaXMgZm9ybS4NCg0KDQpXaGF0IGlzIGFuIGl0ZXJhdG9yPw0KDQoNCkl0ZXJhdG9yLdWoIEMr
+K+KAk9W41oLVtCDWhdWi1bXVpdWv1b8g1acgLNW41oDVqCDWhdWj1b/VodWj1bjWgNWu1b7VuNaC
+1bQg1acg1a/VuNW21b/VpdW11bbVpdaA1bbVpdaA1asg1oXWgNWr1bbVodWvICANCnZlY3Rvci3V
+qyDVv9Wh1oDWgNWl1oDVqyDVvtaA1aHVtdW41b4g1oTVodW11azVpdWs1bjWgiDVsNWh1bTVodaA
+INaJINS11anVpSDVsNWh1bTVpdW01aHVv9Wl1bbWhCDVr9Wh1oDVuNWyINWl1bbWhCDVodW91aXV
+rCAgDQrVq9W21bnVutWl1b0gcG9pbnRlcuKAk9WoINWm1aHVttWj1b7VodWu1asg1bDVodW01aHW
+gCDVodW11aTVutWl1b0g1afVrCBpdGVyYXRvci3VqCDVvtWl1a/Vv9W41oDVqyDVsNWh1bTVodaA
+INW41oLVstWy1aHVr9WrICANCtWh1b7VpdWs1asg1azVodW11bYg1bDVttWh1oDVodW+1bjWgNW4
+1oLVqdW11bjWgtW21bbVpdaA1bjVvtaJIHZlY3RvcjxpbnQ+OjppdGVyYXRvciBpdCDVsNaA1aHV
+tNWh1bbVuNW+ICANCtWw1aHVtdW/1aHWgNWh1oDVuNaC1bQg1aXVttaEIGl0ZXJhdG9yINS/1aHW
+gNW41bIg1aXVttaEINWv1aHVv9Wh1oDVpdWsINWw1aXVv9aH1bXVodWsINWj1bjWgNWu1bjVstW4
+1oLVqdW11bjWgtW21bbVpdaA1aggIA0Kdi5iZWdpbigpLdaB1bjWgtW11oEg1acg1b/VodWs1avV
+vSDVodW81aHVu9Wr1bYg1b/VodaA1oDVqyDVvtaA1aEgKml0LdW91b/VodW21bjWgtW0INWnINW/
+1aHWgNaA1asg1aHWgNWq1aXWhNWoICANCisraXQt1aHVttaB1bbVuNaC1bQg1acg1bDVodW71bjW
+gNWkINW/1aHWgNaA1avVtiAtLWl0LdWh1bbWgdW21bjWgtW0INWnINW21aHVrdW41oDVpCDVv9Wh
+1oDWgNWr1bYgaXQgKyBu4oCTIG4g1oTVodW11awgIA0K1aHVvNWh1bsg1acg1aPVttW41oLVtCBp
+dCB2LmVuZCgpLdaB1bjWgtW11oEg1acg1b/VodWs1avVvSDVvtWl1oDVu9Wr1bYg1b/VodaA1oDV
+q9W2DQoNCg0KSG93IGRvIHlvdSBkZWNsYXJlIGEgdmVjdG9yIG9mIGludGVnZXJzIGluIEMrKz8N
+Cg0KDQojaW5jbHVkZSA8dmVjdG9yPiDVutWl1b/WhCDVpyDVttWl1oDVodW81aXVrCDVvtWl1a/V
+v9W41oDVqyDVo9Ws1a3VodWj1avWgCDWhtWh1bXVrNWoIHN0ZDo6dmVjdG9yPGludD4gIA0KbXlW
+ZWN0b3I7Ly/VptW41oLVvyBteVZlY3RvciDVodW21bjWgtW21bjVviDVvtWl1a/Vv9W41oAgc3Rk
+Ojp2ZWN0b3I8aW50PiB0dmVyID0gezEsIDIsIDMsICANCjR9Oy8v1bbVpdaA1bTVuNaC1a7VvtWh
+1a4g1aHWgNWq1aXWhNW21aXWgNW41b4g1b7VpdWv1b/VuNaAIHB1c2guYmFjayhuKS3VuNW+INWh
+1b7VpdWs1aHWgdW21bjWgtW0INWl1bbWhCDVq9W21bnigJPVuNaAICANCtWh1oDVqtWl1oTWiSBy
+ZXNlcnYoKS3VuNW+IGNhcGFjaXR5INWl1bbWhCDVv9Wh1azVq9W9IGNsZWFyKCkg4oCTINW71bbV
+u9W41oLVtCDVpyDVotW41azVuNaAINW/1aHWgNaA1aXWgNWoICANCmF0KGkpLdW41b4g1b3Vv9W4
+1oLVo9W41oLVtCDVpyDVvdWh1bDVtNWh1bbVttWl1oDVqCwg1bjWgiDVpdWp1aUg1aTVuNaC1oDV
+vSDVpdW9INWj1aHVrNWr1b3VnSDVvdWt1aHVrCDVpyDVv9Wh1azVq9W91okNCg0KDQrUs9aA1aXV
+rCDWhtW41oLVttWv1oHVq9WhLCDVuNaA1agg1a/Vt9aA1bvVqyB2ZWN0b3It1asgW2luZGV4X2E7
+aW5kZXhfYl0g1bTVq9W71aHVr9Wh1bXWhNW41oLVtCDVo9W/1bbVvtW41bIgIA0K1afVrNWl1bTV
+pdW21b/VttWl1oDVqNaJDQrUv9Wh1bbVudWl1awg1aHVtdWkINaG1bjWgtW21a/WgdWr1aHVtiBp
+bnRlcnZhbHMgdmVjdG9yLdW41oLVtCDVv9aA1b7VodWuINWm1bjWgtW11aPVpdaA1asg1bDVodW0
+1aHWgNaJDQoNCtS11bbVqdWh1aTWgNW+1bjWgtW0INWnLCDVuNaAIGludGVydmFscy3VuNaC1bQg
+1a/VodaA1bjVsiDVpdW2INaD1bjVrdWh1bbWgdW+1aXVrCDVvdWt1aHVrCDVtNWr1bvVodWv1aHV
+tdaE1aXWgNaJICANCtWI1oLVt9Wh1aTWgNW41oLVqdW11bjWgtW2INWk1aHWgNWx1bbVpdWsINWh
+1bXVpNW61avVvdWrINWi1bjVrNW41oAg1aTVpdW61oTVpdaA1agg1aLVodaB1aHVvNWl1azVuNaC
+1bbWiQ0KDQrUvdW21aTWgNWrINWs1bjWgtWu1bTVodW2INWw1aHVtNWh1oAg1oXVo9W/1aHVo9W4
+1oDVrtWl1awgaXRlcmF0b3It1bbVpdaA1okNCg0KDQoNClNhbXBsZSBpbnB1dDoNCg0KdmVjdG9y
+OiB7NSwgNiwgNywgOCwgOSwgMSwgMiwgMywgNCwgNSwgNiwgN30NCg0KaW50ZXJ2YWxzOiB7Miwg
+NCwgMywgNywgNSwgMywgNCwgNn0NCg0KDQoNClNhbXBsZSBPdXRwdXQ6DQoNCtWN1a/VptWi1bjW
+gtW0INWv1a/VodW/1aHWgNW+1asgWzI7NF0g1bTVq9W71aHVr9Wh1bXWhNWrINW31oDVu9W41oLV
+tNWoLCDVsNWl1b/VuCBbMzs3XSwg1bDVpdW/1bggWzU7M10g1ocg1b7VpdaA1bvVuNaC1bQgIA0K
+WzQ7Nl06DQoNCg0KDQoxLiB7NSwgNiwgOSwgOCwgNywgMSwgMiwgMywgNCwgNSwgNiwgN30NCg0K
+Mi4gezUsIDYsIDksIDMsIDIsIDEsIDcsIDgsIDQsIDUsIDYsIDd9DQoNCi4uLg0KDQoNCiNpbmNs
+dWRlIDxpb3N0cmVhbT4gI2luY2x1ZGUgPHZlY3Rvcj4gI2luY2x1ZGUgPGFsZ29yaXRobT4gdm9p
+ZCAgDQpyZXZlcnNlUGFydChzdGQ6OnZlY3RvcjxpbnQ+OjppdGVyYXRvciBiZWdpbiwgc3RkOjp2
+ZWN0b3I8aW50Pjo6aXRlcmF0b3IgIA0KZW5kQWZ0ZXIpIHsgc3RkOjpyZXZlcnNlKGJlZ2luLCBl
+bmRBZnRlcik7IH0gdm9pZCAgDQpyZXZlcnNlUGFydHMoc3RkOjp2ZWN0b3I8aW50PiYgZGF0YSwg
+Y29uc3Qgc3RkOjp2ZWN0b3I8c3RkOjpwYWlyPGludCwgIA0KaW50Pj4mIGludGVydmFscykgeyBm
+b3IgKGNvbnN0IGF1dG8mIGludGVydmFsIDogaW50ZXJ2YWxzKSB7IGludCBzdGFydCA9ICANCmlu
+dGVydmFsLmZpcnN0OyBpbnQgZW5kID0gaW50ZXJ2YWwuc2Vjb25kOyBpZiAoc3RhcnQgPj0gMCAm
+JiBlbmQgPj0gMCAmJiAgDQpzdGFydCA8PSBlbmQgJiYgZW5kIDwgZGF0YS5zaXplKCkpIHsgc3Rk
+OjpyZXZlcnNlKGRhdGEuYmVnaW4oKSArIHN0YXJ0LCAgDQpkYXRhLmJlZ2luKCkgKyBlbmQgKyAx
+KTsgfSBlbHNlIHsgc3RkOjpjb3V0IDw8ICJzeGFsIGludGVydmFs1Z0gKCIgPDwgc3RhcnQgIA0K
+PDwgIiwgIiA8PCBlbmQgPDwgIilcbiI7IH0gfSB9IGludCBtYWluKCkgeyBzdGQ6OnZlY3Rvcjxp
+bnQ+IHYgPSB7NSwgNiwgNywgIA0KOCwgOSwgMSwgMiwgMywgNCwgNSwgNiwgN307IHN0ZDo6dmVj
+dG9yPHN0ZDo6cGFpcjxpbnQsIGludD4+IGludGVydmFscyA9ICANCnt7MiwgNH0sIHszLCA3fSwg
+ezUsIDN9LCB7NCwgNn19OyByZXZlcnNlUGFydHModiwgaW50ZXJ2YWxzKTsgZm9yIChpbnQgeCA6
+ICANCnYpIHsgc3RkOjpjb3V0IDw8IHggPDwgIiAiOyB9IHJldHVybiAwOyB9DQoNCg0KSW1wbGVt
+ZW50IFtOYWl2ZSBTb2x1dGlvbl0gb2YgdGhlIOKBoDQtc3VtIGFsZ29yaXRobSB3aXRoIGl0ZXJh
+dG9ycw0KDQoNCiNpbmNsdWRlIDxiaXRzL3N0ZGMrKy5oPiAjaW5jbHVkZSA8dmVjdG9yPiBib29s
+ICANCmNoZWNrNFN1bShzdGQ6OnZlY3RvcjxpbnQ+OjppdGVyYXRvciBiZWdpbixzdGQ6OnZlY3Rv
+cjxpbnQ+OjppdGVyYXRvciAgDQplbmQsaW50IHRhcmdldCkgeyBpbnQgbiA9IHN0ZDo6ZGlzdGFu
+Y2UoYmVnaW4sZW5kKTsgZm9yIChpbnQgaSA9IDA7IGkgPCBuIC0gIA0KMzsgaSsrKXsgZm9yIChp
+bnQgaiA9IGkgKyAxOyBqIDwgbiAtIDI7IGorKyl7IGZvciAoaW50IGsgPSBqICsgMTsgayA8IG4g
+LSAgDQoxOyBrKyspeyBmb3IgKGludCBsID0gayArIDE7IGwgPCBuOyBsKyspeyAgDQppZigqKGJl
+Z2luK2kpKyooYmVnaW4raikrKihiZWdpbitrKSsqKGJlZ2luK2wpPT10YXJnZXQpeyByZXR1cm4g
+dHJ1ZTsgfSB9IH0gIA0KfSB9IHJldHVybiBmYWxzZTsgfSBpbnQgbWFpbigpIHsgc3RkOjp2ZWN0
+b3I8aW50PiB2PXsxLDEsMSwxLDF9OyBpbnQgIA0KdGFyZ2V0PTQ7ICANCnN0ZDo6Y291dDw8KGNo
+ZWNrNFN1bSh2LmJlZ2luKCksdi5lbmQoKSx0YXJnZXQpID8gIlRydWUiIDogIkZhbHNlIik8PHN0
+ZDo6ZW5kbDsgIA0KcmV0dXJuIDA7IH0NCg0KDQrUvNW41oLVrtWl1awg1bDVpdW/1ofVtdWh1awg
+1a3VttWk1avWgNW21aXWgNWoIGdlZWtzZm9yZ2Vla3Mg1bDVodaA1anVodWv1bjWgtW0Lg0KDQpo
+dHRwczovL3d3dy5nZWVrc2ZvcmdlZWtzLm9yZy9wcm9ibGVtcy9tYWdpY2FsLW51bWJlci0xNTg3
+MTE1NjIwLzENCg0KaHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvYWRkLXR3
+by1udW1iZXJzLXJlcHJlc2VudGVkLWJ5LXR3by1hcnJheXMyNDA4LzENCg0KaHR0cHM6Ly93d3cu
+Z2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvc3R1ZmZzLWRpdmlzaW9uNTczNS8xDQoNCmh0dHBz
+Oi8vd3d3LmdlZWtzZm9yZ2Vla3Mub3JnL3Byb2JsZW1zL25vbi1yZXBlYXRpbmctZWxlbWVudDM5
+NTgvMQ0KDQpodHRwczovL3d3dy5nZWVrc2ZvcmdlZWtzLm9yZy9wcm9ibGVtcy9mb3JtLWEtdHJp
+YW5nbGU1OTM1LzENCg0KaHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvcmVh
+cnJhbmdlLWFycmF5LXN1Y2gtdGhhdC1ldmVuLXBvc2l0aW9uZWQtYXJlLWdyZWF0ZXItdGhhbi1v
+ZGQ0ODA0LzENCg0KaHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvc3RyaW5n
+LW1hbmlwdWxhdGlvbjM3MDYvMQ0KDQpodHRwczovL3d3dy5nZWVrc2ZvcmdlZWtzLm9yZy9wcm9i
+bGVtcy9wYWlycy13aGljaC1hcmUtZGl2aXNpYmxlLWJ5LTQxOTIwLzENCg0KaHR0cHM6Ly93d3cu
+Z2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvbWluaW11bS1pbnRlZ2VyLS0xNzA2NDcvMQ0KDQoN
+Cmh0dHBzOi8vd3d3LmdlZWtzZm9yZ2Vla3Mub3JnL3VzZXIvbXVyYWR5YW5tYm9mMC8NCg0KDQrU
+vNW41oLVrtWl1awg1bDVpdW/1ofVtdWh1awg1a3VttWk1avWgNW21aXWgNWoIGdlZWtzZm9yZ2Vl
+a3Mg1bDVodaA1anVodWv1bjWgtW0Lg0KDQrigaBodHRwczovL3d3dy5nZWVrc2ZvcmdlZWtzLm9y
+Zy9wcm9ibGVtcy9tYXhpbXVtLW1lZXRpbmdzLWluLW9uZS1yb29tLzENCg0K4oGgaHR0cHM6Ly93
+d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJvYmxlbXMvcmVwbGFjZS1ldmVyeS1lbGVtZW50LXdpdGgt
+dGhlLWxlYXN0LWdyZWF0ZXItZWxlbWVudC1vbi1pdHMtcmlnaHQvMQ0KDQpodHRwczovL3d3dy5n
+ZWVrc2ZvcmdlZWtzLm9yZy9wcm9ibGVtcy9zb3J0ZWQtc3Vic2VxdWVuY2Utb2Ytc2l6ZS0zLzEN
+Cg0KDQpodHRwczovL3d3dy5nZWVrc2ZvcmdlZWtzLm9yZy91c2VyL211cmFkeWFubWJvZjAvDQoN
+Cg0KQ3JlYXRlIHlvdXIgb3duIEdvb2dsZSBGb3JtDQoNCkRvZXMgdGhpcyBmb3JtIGxvb2sgc3Vz
+cGljaW91cz8gUmVwb3J0DQoNCg0K
+--000000000000cc105b06397cda90
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"zDgDzF9n0Go1ub8gEkLaLA">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"zDgDzF9n0Go1ub8gEkLaLA">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(103,58,183);" width=3D"100%" role=3D"presentation"><tbody><tr heigh=
+t=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_white_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(237,231,246);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out =
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSfUMS_R41JmfOjp9Xx0ulxI=
+WCg9f4D06rNfZmWWRv_rxPS2_A/viewform?usp=3Dmail_form_link" target=3D"_blank"=
+ style=3D"white-space: pre-wrap;">C++ Fundamentals 3 (vector, iterator)<spa=
+n></span></a></h1>Here's what was received.</div><div style=3D"border-botto=
+m: 1px solid #dadce0; border-left: 1px solid #dadce0; border-right: 1px sol=
+id #dadce0; border-top: 8px solid rgb(103,58,183); padding: 20px;background=
+-color: #fff; border-radius: 8px; margin-bottom: 12px;"><h1 dir=3D"ltr" sty=
+le=3D"font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 32px; font-=
+weight: 400; line-height: 42px;white-space: pre-wrap;margin: 0 0 12px;">C++=
+ Fundamentals 3 (vector, iterator)<span></span></h1><div style=3D"white-spa=
+ce: pre-wrap;margin-bottom: 12px;"></div><div dir=3D"ltr">Your email (<b>mu=
+radyanmanvel65@gmail.com</b>) was recorded when you submitted this form.</d=
+iv></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgr=
+ound-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12=
+px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #2021=
+24;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-wei=
+ght: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">
+What is an iterator?
+
+</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white=
+-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 =
+8px; min-height: 20px;width: 100%;">Iterator-=D5=A8 C++=E2=80=93=D5=B8=D6=
+=82=D5=B4 =D6=85=D5=A2=D5=B5=D5=A5=D5=AF=D5=BF =D5=A7 ,=D5=B8=D6=80=D5=A8 =
+=D6=85=D5=A3=D5=BF=D5=A1=D5=A3=D5=B8=D6=80=D5=AE=D5=BE=D5=B8=D6=82=D5=B4 =
+=D5=A7 =D5=AF=D5=B8=D5=B6=D5=BF=D5=A5=D5=B5=D5=B6=D5=A5=D6=80=D5=B6=D5=A5=
+=D6=80=D5=AB =D6=85=D6=80=D5=AB=D5=B6=D5=A1=D5=AF vector-=D5=AB =D5=BF=D5=
+=A1=D6=80=D6=80=D5=A5=D6=80=D5=AB =D5=BE=D6=80=D5=A1=D5=B5=D5=B8=D5=BE =D6=
+=84=D5=A1=D5=B5=D5=AC=D5=A5=D5=AC=D5=B8=D6=82 =D5=B0=D5=A1=D5=B4=D5=A1=D6=
+=80 =D6=89
+=D4=B5=D5=A9=D5=A5 =D5=B0=D5=A1=D5=B4=D5=A5=D5=B4=D5=A1=D5=BF=D5=A5=D5=B6=
+=D6=84 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A5=D5=B6=D6=84 =D5=A1=D5=BD=D5=A5=
+=D5=AC =D5=AB=D5=B6=D5=B9=D5=BA=D5=A5=D5=BD pointer=E2=80=93=D5=A8 =D5=A6=
+=D5=A1=D5=B6=D5=A3=D5=BE=D5=A1=D5=AE=D5=AB =D5=B0=D5=A1=D5=B4=D5=A1=D6=80 =
+=D5=A1=D5=B5=D5=A4=D5=BA=D5=A5=D5=BD =D5=A7=D5=AC iterator-=D5=A8 =D5=BE=D5=
+=A5=D5=AF=D5=BF=D5=B8=D6=80=D5=AB =D5=B0=D5=A1=D5=B4=D5=A1=D6=80 =D5=B8=D6=
+=82=D5=B2=D5=B2=D5=A1=D5=AF=D5=AB =D5=A1=D5=BE=D5=A5=D5=AC=D5=AB =D5=AC=D5=
+=A1=D5=B5=D5=B6 =D5=B0=D5=B6=D5=A1=D6=80=D5=A1=D5=BE=D5=B8=D6=80=D5=B8=D6=
+=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=B6=D5=A5=D6=80=D5=B8=D5=BE=D6=89
+vector&lt;int&gt;::iterator it =D5=B0=D6=80=D5=A1=D5=B4=D5=A1=D5=B6=D5=B8=
+=D5=BE =D5=B0=D5=A1=D5=B5=D5=BF=D5=A1=D6=80=D5=A1=D6=80=D5=B8=D6=82=D5=B4 =
+=D5=A5=D5=B6=D6=84 iterator
+=D4=BF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A5=D5=B6=D6=84 =D5=AF=D5=A1=D5=BF=D5=A1=
+=D6=80=D5=A5=D5=AC =D5=B0=D5=A5=D5=BF=D6=87=D5=B5=D5=A1=D5=AC =D5=A3=D5=B8=
+=D6=80=D5=AE=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=B6=D5=
+=A5=D6=80=D5=A8
+v.begin()-=D6=81=D5=B8=D6=82=D5=B5=D6=81 =D5=A7 =D5=BF=D5=A1=D5=AC=D5=AB=D5=
+=BD =D5=A1=D5=BC=D5=A1=D5=BB=D5=AB=D5=B6 =D5=BF=D5=A1=D6=80=D6=80=D5=AB =D5=
+=BE=D6=80=D5=A1
+*it-=D5=BD=D5=BF=D5=A1=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 =D5=BF=D5=A1=D6=80=D6=
+=80=D5=AB =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8
+++it-=D5=A1=D5=B6=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 =D5=B0=D5=A1=D5=BB=
+=D5=B8=D6=80=D5=A4 =D5=BF=D5=A1=D6=80=D6=80=D5=AB=D5=B6
+--it-=D5=A1=D5=B6=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 =D5=B6=D5=A1=D5=AD=
+=D5=B8=D6=80=D5=A4 =D5=BF=D5=A1=D6=80=D6=80=D5=AB=D5=B6
+it + n=E2=80=93 n =D6=84=D5=A1=D5=B5=D5=AC =D5=A1=D5=BC=D5=A1=D5=BB =D5=A7 =
+=D5=A3=D5=B6=D5=B8=D6=82=D5=B4
+it v.end()-=D6=81=D5=B8=D6=82=D5=B5=D6=81 =D5=A7 =D5=BF=D5=A1=D5=AC=D5=AB=
+=D5=BD =D5=BE=D5=A5=D6=80=D5=BB=D5=AB=D5=B6 =D5=BF=D5=A1=D6=80=D6=80=D5=AB=
+=D5=B6</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 2=
+0px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;ma=
+rgin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+ 0 16px;">
+How do you declare a vector of integers in C++?
+
+</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white=
+-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 =
+8px; min-height: 20px;width: 100%;">#include &lt;vector&gt;=20
+=D5=BA=D5=A5=D5=BF=D6=84 =D5=A7 =D5=B6=D5=A5=D6=80=D5=A1=D5=BC=D5=A5=D5=AC =
+=D5=BE=D5=A5=D5=AF=D5=BF=D5=B8=D6=80=D5=AB =D5=A3=D5=AC=D5=AD=D5=A1=D5=A3=
+=D5=AB=D6=80 =D6=86=D5=A1=D5=B5=D5=AC=D5=A8
+std::vector&lt;int&gt; myVector;//=D5=A6=D5=B8=D6=82=D5=BF myVector =D5=A1=
+=D5=B6=D5=B8=D6=82=D5=B6=D5=B8=D5=BE =D5=BE=D5=A5=D5=AF=D5=BF=D5=B8=D6=80
+std::vector&lt;int&gt; tver =3D {1, 2, 3, 4};//=D5=B6=D5=A5=D6=80=D5=B4=D5=
+=B8=D6=82=D5=AE=D5=BE=D5=A1=D5=AE =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=B6=D5=
+=A5=D6=80=D5=B8=D5=BE =D5=BE=D5=A5=D5=AF=D5=BF=D5=B8=D6=80
+push.back(n)-=D5=B8=D5=BE =D5=A1=D5=BE=D5=A5=D5=AC=D5=A1=D6=81=D5=B6=D5=B8=
+=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 =D5=AB=D5=B6=D5=B9=E2=80=93=D5=B8=D6=80 =D5=
+=A1=D6=80=D5=AA=D5=A5=D6=84=D6=89
+reserv()-=D5=B8=D5=BE capacity =D5=A5=D5=B6=D6=84 =D5=BF=D5=A1=D5=AC=D5=AB=
+=D5=BD
+clear() =E2=80=93 =D5=BB=D5=B6=D5=BB=D5=B8=D6=82=D5=B4 =D5=A7 =D5=A2=D5=B8=
+=D5=AC=D5=B8=D6=80 =D5=BF=D5=A1=D6=80=D6=80=D5=A5=D6=80=D5=A8
+at(i)-=D5=B8=D5=BE =D5=BD=D5=BF=D5=B8=D6=82=D5=A3=D5=B8=D6=82=D5=B4 =D5=A7 =
+=D5=BD=D5=A1=D5=B0=D5=B4=D5=A1=D5=B6=D5=B6=D5=A5=D6=80=D5=A8, =D5=B8=D6=82 =
+=D5=A5=D5=A9=D5=A5 =D5=A4=D5=B8=D6=82=D6=80=D5=BD =D5=A5=D5=BD =D5=A3=D5=A1=
+=D5=AC=D5=AB=D5=BD=D5=9D =D5=BD=D5=AD=D5=A1=D5=AC =D5=A7 =D5=BF=D5=A1=D5=AC=
+=D5=AB=D5=BD=D6=89</div></div></div><div style=3D"border: 1px solid #dadce0=
+; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bot=
+tom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"=
+auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-seri=
+f;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wra=
+p;margin: 0 0 16px;">=D4=B3=D6=80=D5=A5=D5=AC =D6=86=D5=B8=D6=82=D5=B6=D5=
+=AF=D6=81=D5=AB=D5=A1, =D5=B8=D6=80=D5=A8 =D5=AF=D5=B7=D6=80=D5=BB=D5=AB ve=
+ctor-=D5=AB [index_a;index_b] =D5=B4=D5=AB=D5=BB=D5=A1=D5=AF=D5=A1=D5=B5=D6=
+=84=D5=B8=D6=82=D5=B4 =D5=A3=D5=BF=D5=B6=D5=BE=D5=B8=D5=B2 =D5=A7=D5=AC=D5=
+=A5=D5=B4=D5=A5=D5=B6=D5=BF=D5=B6=D5=A5=D6=80=D5=A8=D6=89<div>=D4=BF=D5=A1=
+=D5=B6=D5=B9=D5=A5=D5=AC =D5=A1=D5=B5=D5=A4 =D6=86=D5=B8=D6=82=D5=B6=D5=AF=
+=D6=81=D5=AB=D5=A1=D5=B6 intervals vector-=D5=B8=D6=82=D5=B4 =D5=BF=D6=80=
+=D5=BE=D5=A1=D5=AE =D5=A6=D5=B8=D6=82=D5=B5=D5=A3=D5=A5=D6=80=D5=AB =D5=B0=
+=D5=A1=D5=B4=D5=A1=D6=80=D6=89</div><div>=D4=B5=D5=B6=D5=A9=D5=A1=D5=A4=D6=
+=80=D5=BE=D5=B8=D6=82=D5=B4 =D5=A7, =D5=B8=D6=80 intervals-=D5=B8=D6=82=D5=
+=B4 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A5=D5=B6 =D6=83=D5=B8=D5=AD=D5=A1=D5=
+=B6=D6=81=D5=BE=D5=A5=D5=AC =D5=BD=D5=AD=D5=A1=D5=AC =D5=B4=D5=AB=D5=BB=D5=
+=A1=D5=AF=D5=A1=D5=B5=D6=84=D5=A5=D6=80=D6=89 =D5=88=D6=82=D5=B7=D5=A1=D5=
+=A4=D6=80=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6 =D5=A4=D5=A1=D6=80=D5=
+=B1=D5=B6=D5=A5=D5=AC =D5=A1=D5=B5=D5=A4=D5=BA=D5=AB=D5=BD=D5=AB =D5=A2=D5=
+=B8=D5=AC=D5=B8=D6=80 =D5=A4=D5=A5=D5=BA=D6=84=D5=A5=D6=80=D5=A8 =D5=A2=D5=
+=A1=D6=81=D5=A1=D5=BC=D5=A5=D5=AC=D5=B8=D6=82=D5=B6=D6=89</div><div>=D4=BD=
+=D5=B6=D5=A4=D6=80=D5=AB =D5=AC=D5=B8=D6=82=D5=AE=D5=B4=D5=A1=D5=B6 =D5=B0=
+=D5=A1=D5=B4=D5=A1=D6=80 =D6=85=D5=A3=D5=BF=D5=A1=D5=A3=D5=B8=D6=80=D5=AE=
+=D5=A5=D5=AC iterator-=D5=B6=D5=A5=D6=80=D6=89</div><div><br></div><div>Sam=
+ple input:</div><div>vector: {5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7}</div><div=
+>intervals: {2, 4, 3, 7, 5, 3, 4, 6}</div><div><br></div><div>Sample Output=
+:</div><div>=D5=8D=D5=AF=D5=A6=D5=A2=D5=B8=D6=82=D5=B4 =D5=AF=D5=AF=D5=A1=
+=D5=BF=D5=A1=D6=80=D5=BE=D5=AB [2;4] =D5=B4=D5=AB=D5=BB=D5=A1=D5=AF=D5=A1=
+=D5=B5=D6=84=D5=AB =D5=B7=D6=80=D5=BB=D5=B8=D6=82=D5=B4=D5=A8, =D5=B0=D5=A5=
+=D5=BF=D5=B8 [3;7], =D5=B0=D5=A5=D5=BF=D5=B8 [5;3] =D6=87 =D5=BE=D5=A5=D6=
+=80=D5=BB=D5=B8=D6=82=D5=B4 [4;6]:</div><div><br></div><div>1. {5, 6, <b>9,=
+ 8, 7</b>, 1, 2, 3, 4, 5, 6, 7}</div><div>2.=C2=A0{5, 6, 9, <b>3, 2, 1, 7, =
+8</b><span>,=C2=A04, 5, 6, 7}</span></div><div>...</div></h2></div><div sty=
+le=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bo=
+rder-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20=
+px;width: 100%;">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+void reversePart(std::vector&lt;int&gt;::iterator begin, std::vector&lt;int=
+&gt;::iterator endAfter)
+{
+    std::reverse(begin, endAfter);
+}
+
+void reverseParts(std::vector&lt;int&gt;&amp; data, const std::vector&lt;st=
+d::pair&lt;int, int&gt;&gt;&amp; intervals)
+{
+    for (const auto&amp; interval : intervals)
+    {
+        int start =3D interval.first;
+        int end =3D interval.second;
+        if (start &gt;=3D 0 &amp;&amp; end &gt;=3D 0 &amp;&amp; start &lt;=
+=3D end &amp;&amp; end &lt; data.size())
+        {
+            std::reverse(data.begin() + start, data.begin() + end + 1);
+        }
+        else
+        {
+            std::cout &lt;&lt; &quot;sxal interval=D5=9D (&quot; &lt;&lt; s=
+tart &lt;&lt; &quot;, &quot; &lt;&lt; end &lt;&lt; &quot;)\n&quot;;
+        }
+    }
+}
+
+int main()
+{
+    std::vector&lt;int&gt; v =3D {5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7};
+    std::vector&lt;std::pair&lt;int, int&gt;&gt; intervals =3D {{2, 4}, {3,=
+ 7}, {5, 3}, {4, 6}};
+    reverseParts(v, intervals); =20
+    for (int x : v)
+    {
+        std::cout &lt;&lt; x &lt;&lt; &quot; &quot;;
+    }
+    return 0;
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">Implement [Naive Solution] of the =E2=81=A0<a href=3D"https://www.geeksf=
+orgeeks.org/dsa/find-four-numbers-with-sum-equal-to-given-sum/">4-sum algor=
+ithm</a> with iterators</h2></div><div style=3D"padding: 0 12px;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;bi=
+ts/stdc++.h&gt;
+#include &lt;vector&gt;
+
+bool check4Sum(std::vector&lt;int&gt;::iterator begin,std::vector&lt;int&gt=
+;::iterator end,int target) {
+    int n =3D std::distance(begin,end);
+    for (int i =3D 0; i &lt; n - 3; i++){
+        for (int j =3D i + 1; j &lt; n - 2; j++){
+            for (int k =3D j + 1; k &lt; n - 1; k++){
+                for (int l =3D k + 1; l &lt; n; l++){
+                    if(*(begin+i)+*(begin+j)+*(begin+k)+*(begin+l)=3D=3Dtar=
+get){
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
+
+ =20
+
+int main() {
+    std::vector&lt;int&gt; v=3D{1,1,1,1,1};
+    int target=3D4;
+    std::cout&lt;&lt;(check4Sum(v.begin(),v.end(),target) ? &quot;True&quot=
+; : &quot;False&quot;)&lt;&lt;std::endl;
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D4=BC=D5=B8=D6=82=D5=AE=D5=A5=D5=AC =D5=B0=D5=A5=D5=BF=D6=87=D5=B5=D5=
+=A1=D5=AC =D5=AD=D5=B6=D5=A4=D5=AB=D6=80=D5=B6=D5=A5=D6=80=D5=A8 geeksforge=
+eks =D5=B0=D5=A1=D6=80=D5=A9=D5=A1=D5=AF=D5=B8=D6=82=D5=B4.<br><p><a href=
+=3D"https://www.geeksforgeeks.org/problems/magical-number-1587115620/1">htt=
+ps://www.geeksforgeeks.org/problems/magical-number-1587115620/1</a></p><p><=
+a href=3D"https://www.geeksforgeeks.org/problems/add-two-numbers-represente=
+d-by-two-arrays2408/1">https://www.geeksforgeeks.org/problems/add-two-numbe=
+rs-represented-by-two-arrays2408/1</a></p><p><a href=3D"https://www.geeksfo=
+rgeeks.org/problems/stuffs-division5735/1">https://www.geeksforgeeks.org/pr=
+oblems/stuffs-division5735/1</a></p><p><a href=3D"https://www.geeksforgeeks=
+.org/problems/non-repeating-element3958/1">https://www.geeksforgeeks.org/pr=
+oblems/non-repeating-element3958/1</a></p><p><a href=3D"https://www.geeksfo=
+rgeeks.org/problems/form-a-triangle5935/1">https://www.geeksforgeeks.org/pr=
+oblems/form-a-triangle5935/1</a></p><p><a href=3D"https://www.geeksforgeeks=
+.org/problems/rearrange-array-such-that-even-positioned-are-greater-than-od=
+d4804/1">https://www.geeksforgeeks.org/problems/rearrange-array-such-that-e=
+ven-positioned-are-greater-than-odd4804/1</a></p><p><a href=3D"https://www.=
+geeksforgeeks.org/problems/string-manipulation3706/1">https://www.geeksforg=
+eeks.org/problems/string-manipulation3706/1</a></p><p><a href=3D"https://ww=
+w.geeksforgeeks.org/problems/pairs-which-are-divisible-by-41920/1">https://=
+www.geeksforgeeks.org/problems/pairs-which-are-divisible-by-41920/1</a></p>=
+<p><a href=3D"https://www.geeksforgeeks.org/problems/minimum-integer--17064=
+7/1">https://www.geeksforgeeks.org/problems/minimum-integer--170647/1</a></=
+p></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"whi=
+te-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px =
+0 8px; min-height: 20px;width: 100%;">https://www.geeksforgeeks.org/user/mu=
+radyanmbof0/</div></div></div><div style=3D"border: 1px solid #dadce0; padd=
+ing: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 1=
+2px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" =
+style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font=
+-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;marg=
+in: 0 0 16px;">=D4=BC=D5=B8=D6=82=D5=AE=D5=A5=D5=AC =D5=B0=D5=A5=D5=BF=D6=
+=87=D5=B5=D5=A1=D5=AC =D5=AD=D5=B6=D5=A4=D5=AB=D6=80=D5=B6=D5=A5=D6=80=D5=
+=A8 geeksforgeeks =D5=B0=D5=A1=D6=80=D5=A9=D5=A1=D5=AF=D5=B8=D6=82=D5=B4.<b=
+r><div>=E2=81=A0<a href=3D"https://www.geeksforgeeks.org/problems/maximum-m=
+eetings-in-one-room/1">https://www.geeksforgeeks.org/problems/maximum-meeti=
+ngs-in-one-room/1</a></div><div>=E2=81=A0<a href=3D"https://www.geeksforgee=
+ks.org/problems/replace-every-element-with-the-least-greater-element-on-its=
+-right/1">https://www.geeksforgeeks.org/problems/replace-every-element-with=
+-the-least-greater-element-on-its-right/1</a></div><div><a href=3D"https://=
+www.geeksforgeeks.org/problems/sorted-subsequence-of-size-3/1?">https://www=
+.geeksforgeeks.org/problems/sorted-subsequence-of-size-3/1</a></div></h2></=
+div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space:=
+ pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; mi=
+n-height: 20px;width: 100%;">https://www.geeksforgeeks.org/user/muradyanmbo=
+f0/</div></div></div></div><table align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"max-width: 672px; min-width: 154px; border-collapse: s=
+eparate; border-spacing: 0 0.2em;" width=3D"100%" role=3D"presentation"><tb=
+ody><tr height=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs.googl=
+e.com/forms?usp=3Dmail_form_link" style=3D"color: #424242; font-size: 13px;=
+">Create your own Google Form</a></td></tr><tr><td>Does this form look susp=
+icious? <a href=3D"https://drive.google.com/u/0/abuse?id=3DAKkXjozlHd4UBNEE=
+cehxH_HQMV8pze5siherWz-aAQnTO8clE-5CnhIaS2evqUwQHovtpBDdnFxkXndBhOIAr3s:0&a=
+mp;docurl=3Dhttps://docs.google.com/forms/u/0/d/e/1FAIpQLSfUMS_R41JmfOjp9Xx=
+0ulxIWCg9f4D06rNfZmWWRv_rxPS2_A/formResponse&amp;usp=3Dmail_receipt_abuse" =
+target=3D"_blank" style=3D"color: #424242; font-size: 13px;">Report</a></td=
+></tr></tbody></table></div></body></html>
+--000000000000cc105b06397cda90--
