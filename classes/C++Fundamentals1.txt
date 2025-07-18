@@ -1,0 +1,655 @@
+Delivered-To: muradyanmanvel65@gmail.com
+Received: by 2002:a05:6200:628d:b0:5a9:3124:a43c with SMTP id gp13csp125176qnb;
+        Mon, 30 Jun 2025 04:38:23 -0700 (PDT)
+X-Received: by 2002:a05:622a:2586:b0:4a7:944:9af6 with SMTP id d75a77b69052e-4a7f2db5f6bmr236861201cf.3.1751283503429;
+        Mon, 30 Jun 2025 04:38:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751283503; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ig52VChpkNShRNS+BeX5wZqpp/1ae99VS8IF8a6eIiaoPk6snq3cDCFo+yj0e5UsC0
+         DWf0+KoN3nPU8wRL9l8JP4hLrhtA8fnL4fC8e/GzfnbR/2WCuk+sIQwNCRl3n1h5uGoQ
+         8hKyFBPQB+zCLQNCNfBdPDPvtYJz4WSGJ/dxltRC5jGera2R+418jnV7WiQFPlI+6si2
+         dbs/vPsBYHd7Ash43IUxn/ankQM2vwK6GJa7SiiJKCP15n3P6kQ3QoeHmbnD6DH+ObW6
+         zoT2PHdpFgAWuuG24Z6YF10obXnqwdJblNw9sT353DiN5kn9bIiuygk7mKMoJU+tMMFp
+         CXdw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=J+ZdgKA7VhRoLlg6LcIjRo7a3Hhe9AZLFokmyrDEQGo=;
+        fh=2N85UJKi3UYSz8m8gKFw4u4ZYxO7IpG9QsLYUg5sqqg=;
+        b=SEb61EFjEGBgfPfkXzv4yhU/+IXUunyFbcfiK17PESu0KMoVYfDTk2gqrAhwZsHdOF
+         pnxr7mB4S/u9EPChgN+wacXGaseYblDq8sRGImzDM14AFeUPR70/QMK6owDa1+/E0p75
+         rfM8SZ3Oc302vAxdE0YURgbAXn9nJyvsb6qjRWet3rUHrWaknlfLZy7/FrBOIy5OEza5
+         jtTWBAK1janhXWrW8oVaE8ZWN6VTSblbSWItVY1nvwPiIw1k8QMXu8I6a55glJNijfiJ
+         7T5v8OW4T+4tMIhggEBemHn2E9etzeQXIuHYXSoFwVML+j6S7Fw1FSMtURdMGW+qrRfb
+         JIGQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=Johkc20O;
+       spf=pass (google.com: domain of 3lndiabykao8wfidj-ivtvzgkj-efivgcpxffxcv.tfd@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3LndiaBYKAO8Wfidj-iVTVZgkj-efiVgcpXffXcV.Tfd@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3LndiaBYKAO8Wfidj-iVTVZgkj-efiVgcpXffXcV.Tfd@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id d75a77b69052e-4a7fc214eefsor56973141cf.5.2025.06.30.04.38.23
+        for <muradyanmanvel65@gmail.com>
+        (Google Transport Security);
+        Mon, 30 Jun 2025 04:38:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3lndiabykao8wfidj-ivtvzgkj-efivgcpxffxcv.tfd@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=Johkc20O;
+       spf=pass (google.com: domain of 3lndiabykao8wfidj-ivtvzgkj-efivgcpxffxcv.tfd@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3LndiaBYKAO8Wfidj-iVTVZgkj-efiVgcpXffXcV.Tfd@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1751283503; x=1751888303; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=J+ZdgKA7VhRoLlg6LcIjRo7a3Hhe9AZLFokmyrDEQGo=;
+        b=Johkc20OUNy5T405ODbKd4SodyakGPyxNHnG/6XinAsSr3F8EXXkSeDb24hwC8NF7S
+         WN2utB7+SBHEJsUpNH75ZhcdJClvb4oYwJFSd31lecQIILX8XSo58LcVyU8aM0kiSkoZ
+         utYqPeqVJBx9Otw6/wjb3EmxgbSg6W9zaoVxN/5FTSAWVnWKWsj8vRj4YfY0qw2BOvGC
+         LmCGBWYZbvVljjLEp1RMGQCK2Gmo3leST23PNoXXbOokAYzE+c8hhE5+ARSRpmEq87cx
+         lj2g+L51QVmsU2o3gYesf19FB2pMNDg5/YrCz88b4AtAkBSWS5V0357uwIja4gT6VHsJ
+         lhuQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1751283503; x=1751888303;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=J+ZdgKA7VhRoLlg6LcIjRo7a3Hhe9AZLFokmyrDEQGo=;
+        b=VYBz9762aFHhu2IFzySWPF6rZQe0VWOLseQODfreYHJPvAy1aZnYmmlvvxkJVq14cm
+         OEYZQA0meuEu8fUJNoj0BQV/CL7x5EqHza7/DPzpbz4V9lkpFjQo77ownHBHMBrzSlGS
+         hRb+lLLfzbAweYdvrIs6t5Bv8wlWOV9tX2s0chizA1d5x9wd1OICiVpejeZQ/YVDylgo
+         rX/u56vFx8Ih6EwOs/OsUaV1uvQfx1DZcIdjScKGk1C7yaW4epUNadDaPVNrqKCFSMcU
+         OPV3fqrAtLzejqv1Zhshtxu8fL9ZekM66ACbgvq5Jr+RQiknc0p/wU1j9MuPGvkNk+cC
+         X9/w==
+X-Gm-Message-State: AOJu0YwArLglsj+kyLxitNKj4bW58ZZGyKCdqbyy2lPZ9tvxSGqyBUJp
+	l1m1XymK80ZbSJLXHBaSQqBez/IZBFOhagKvBYZO8QURJiFN9fsNQjOoTAg4zCzBAFLENOXeztO
+	GNDG+bY6vOeSxkSXoUEJKJZ+WQ1+rt1Q1Xz7Ok2Y=
+X-Google-Smtp-Source: AGHT+IHAWRpiLT3G8TUO56J5C8yBo0KeyaTGlRbf8JqDzuXsiF53uaz6CJyrCtfEQCdkbZ7k4rZ4D+KmmeWAOryhkioOtA==
+MIME-Version: 1.0
+X-Received: by 2002:a05:622a:114d:b0:4a6:f00f:6618 with SMTP id
+ d75a77b69052e-4a7f2de1992mr295324531cf.10.1751283502694; Mon, 30 Jun 2025
+ 04:38:22 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSeBm2CvYksRLil8qm0QxR4nwlvWCVmjLTuPZ98H5kfH84P-kQ
+X-GoogleForms-IsConsumerForm: true
+Message-ID: <autogen-java-845c1bfe-5a5b-476a-bbed-dac4ecf7792b@google.com>
+Date: Mon, 30 Jun 2025 11:38:22 +0000
+Subject: C++ Fundamentals 1 (Types, Statements, Loops)
+From: Google Forms <forms-receipts-noreply@google.com>
+To: muradyanmanvel65@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000001450be0638c87799"
+
+--0000000000001450be0638c87799
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIG91dCBDKysgRnVuZGFtZW50YWxz
+IDEgKFR5cGVzLCBTdGF0ZW1lbnRzLCBMb29wcykNCkhlcmUncyB3aGF0IHdhcyByZWNlaXZlZC4N
+Cg0KDQpDKysgRnVuZGFtZW50YWxzIDEgKFR5cGVzLCBTdGF0ZW1lbnRzLCBMb29wcykNCg0KDQpZ
+b3VyIGVtYWlsIChtdXJhZHlhbm1hbnZlbDY1QGdtYWlsLmNvbSkgd2FzIHJlY29yZGVkIHdoZW4g
+eW91IHN1Ym1pdHRlZCAgDQp0aGlzIGZvcm0uDQoNCg0KV3JpdGUgYSBDKysgcHJvZ3JhbSB0aGF0
+IGFza3MgdGhlIHVzZXIgdG8gZW50ZXIgYSBwb3NpdGl2ZSBpbnRlZ2VyLCBhbmQgIA0KdGhlbiBw
+cmludHMgdGhlIGZhY3RvcmlhbCBvZiB0aGF0IG51bWJlci4NCg0KDQoNCkV4YW1wbGUNCklucHV0
+Og0KNQ0KT3V0cHV0Og0KRmFjdG9yaWFsIG9mIDUgaXMgMTIwDQoNCg0KI2luY2x1ZGUgPGlvc3Ry
+ZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgbWFpbigpIHsgaW50IGEgLCBlcXVhbD0xOyBj
+aW4gIA0KPj4gYTsgd2hpbGUoYT4wKSB7IGVxdWFsICo9IGE7IGEgLS07IH0gY291dCA8PCBlcXVh
+bCA8PCBlbmRsOyByZXR1cm4gMDsgfQ0KDQoNCldyaXRlIGEgQysrIHByb2dyYW0gdGhhdCB0YWtl
+cyBhbiBpbnRlZ2VyIGlucHV0IGZyb20gdGhlIHVzZXIgYW5kICANCmNhbGN1bGF0ZXMgdGhlIHN1
+bSBvZiBpdHMgZGlnaXRzLg0KDQpJbnB1dDoNCjEyMzQNCk91dHB1dDoNClN1bSBvZiBkaWdpdHM6
+IDEwDQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgbWFp
+bigpIHsgaW50IG51bTsgY2luPj5udW07ICANCmludCBzdW09MDsgaW50IHRpdj1udW07IGlmICh0
+aXY8MCl7IHRpdj0tdGl2OyB9IHdoaWxlKHRpdj4wKXsgc3VtKz10aXYlMTA7ICANCnRpdi89MTA7
+IH0gY291dDw8c3VtPDxlbmRsOyByZXR1cm4gMDsgfQ0KDQoNCldyaXRlIGEgc2ltcGxlIGNhbGN1
+bGF0b3IgcHJvZ3JhbSBpbiBDKysgdGhhdCB0YWtlcyB0d28gbnVtYmVycyBhbmQgYW4gIA0Kb3Bl
+cmF0b3IgKCssIC0sICosIC8pIGFzIGlucHV0Lg0KDQoNCg0KSW5wdXQ6DQo1IDMgKw0KT3V0cHV0
+Og0KUmVzdWx0OiA4DQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3Rk
+OyBpbnQgbWFpbigpIHsgaW50IGEsYjsgY2hhciBuc2hhbjsgIA0KY2luPj5hPj5iPj5uc2hhbjsg
+ZG91YmxlIHJlc3VsdDsgc3dpdGNoKG5zaGFuKXsgY2FzZScrJzogcmVzdWx0PWErYjsgYnJlYWs7
+ICANCmNhc2UgJy0nOiByZXN1bHQ9YWI7IGJyZWFrOyBjYXNlICcqJzogcmVzdWx0PWEqYjsgYnJl
+YWs7IGNhc2UgJy8nOiAgDQppZihiPT0wKXsgY291dDw8ImVycm9yIjw8ZW5kbDsgcmV0dXJuIDE7
+IH1lbHNlIHJlc3VsdD1hL2I7IGJyZWFrOyBkZWZhdWx0OiAgDQpjb3V0IDw8ICJFcnJvcjogSW52
+YWxpZCBvcGVyYXRvclxuIjsgfSBjb3V0PDwicmVzdWx0IGlzICI8PHJlc3VsdDw8ZW5kbDsgIA0K
+cmV0dXJuIDA7IH0NCg0KDQpXcml0ZSBhIEMrKyBwcm9ncmFtIHRoYXQgdGFrZXMgYW4gaW50ZWdl
+ciBhcyBpbnB1dCBhbmQgZGV0ZXJtaW5lcyB3aGV0aGVyICANCml0IGlzIGEgcHJpbWUgb3IgY29t
+cG9zaXRlIG51bWJlci4NCg0KDQoNCkV4YW1wbGUNCklucHV0Og0KNw0KT3V0cHV0Og0KNyBpcyBh
+IHByaW1lIG51bWJlci4NCg0KDQojaW5jbHVkZSA8aW9zdHJlYW0+IHVzaW5nIG5hbWVzcGFjZSBz
+dGQ7IGludCBtYWluKCkgeyBpbnQgYTsgY2luPj5hOyAgDQppZihhPD0xKXsgY291dDw8YTw8Ii1u
+IHBhcnoga2FtIGJheGFkcnlhbCBjaGUiPDxlbmRsOyByZXR1cm4gMDsgfSBib29sICANCnBhcno9
+dHJ1ZTsgZm9yKGludCBpPTI7aTxhOysraSkgaWYgKGElaT09MCl7IHBhcnogPSBmYWxzZTsgYnJl
+YWs7IH0gIA0KaWYocGFyeikgY291dDw8YTw8InRpdnkgcGFyeiB0aXYgZSI8PGVuZGw7IGVsc2Ug
+Y291dDw8YTw8InRpdnkgYmF4YWRyeWFsICANCnRpdiBlIjw8ZW5kbDsgcmV0dXJuIDA7IH0NCg0K
+DQpXcml0ZSBhIHByb2dyYW0gdGhhdCB3aWxsIGlucHV0IGFuIGludGVnZXIgbnVtYmVyIGFuZCBj
+YWxjdWxhdGUgdGhlIGludmVyc2UgIA0Kb2YgdGhlIG51bWJlci4gUHJpbnQgdGhlIG91dHB1dC4N
+Cg0KDQoNCkV4YW1wbGU6DQpJbnB1dDoNCjE2Mw0KT3V0cHV0Og0KMzYxDQoNCg0KI2luY2x1ZGUg
+PGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgbWFpbigpIHsgaW50IG4scmV2ZXJz
+ZWQ9MDsgIA0KY291dDw8Im11dHFhZ3JlcSBhbWJveGogdGl2Ijw8ZW5kbDsgY2luPj5uOyB3aGls
+ZShuIT0wKXsgaW50IHR2YW5zaGFuPW4lMTA7ICANCnJldmVyc2VkPXJldmVyc2VkKjEwICsgdHZh
+bnNoYW47IG4vPTEwOyB9IGNvdXQ8PCJoYWthZGFyZHp5IGAiPDxyZXZlcnNlZDsgIA0KcmV0dXJu
+IDA7IH0NCg0KDQpXcml0ZSBhIHByb2dyYW0gdGhhdCB3aWxsIGlucHV0IHR3byBpbnRlZ2VycyAt
+IE4gYW5kIE0uIFRoZSBwcm9ncmFtICANCnNob3VsZCAiZHJhdyIgYSByZWN0YW5nbGUgb2YgTnhN
+IHNpemUgdXNpbmcgIioiLCAiLyIsICJcIiBhbmQgc3BhY2VzLg0KDQoNCkV4YW1wbGU6DQpJbnB1
+dDoNCjYgNA0KT3V0cHV0Og0KLyoqKipcDQoqICoNCiogKg0KXCoqKiovDQoNCg0KI2luY2x1ZGUg
+PGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgbWFpbigpIHsgaW50IE4sIE07IGNv
+dXQgIA0KPDwgIk11dHFhZ3JlcSBsYXludXR5dW55ICI7IGNpbiA+PiBOIDsgY291dDw8ICJNdXRx
+YWdyZXEgYmFyZHpydXR5dW55ICI7ICANCmNpbj4+TTsgY291dDw8Ii8iOyBmb3IoaW50IGk9MDtp
+PE4tMjtpKyspY291dDw8IioiOyBjb3V0PDwiXFwiPDxlbmRsOyAgDQpmb3IoaW50IGk9MDtpPE0t
+MjtpKyspeyBjb3V0PDwiKiI7IGZvciAoaW50IGo9MDtqPE4tMjtqKyspY291dDw8IiAiOyAgDQpj
+b3V0PDwiKiI8PGVuZGw7IH0gY291dDw8IlxcIjsgZm9yKGludCBpPTA7aTxOLTI7aSsrKWNvdXQ8
+PCIqIjsgY291dDw8Ii8iOyAgDQpyZXR1cm4gMDsgfQ0KDQoNCldyaXRlIGEgcHJvZ3JhbSB0aGF0
+IGNhbGN1bGF0ZXMgYSByYW5kb20gbnVtYmVyIGZyb20gMSB0aHJvdWdoIDEwMC4gVGhlICANCnBy
+b2dyYW0gdGhlbiBhc2tzIHRoZSB1c2VyIHRvIGd1ZXNzIHRoZSBudW1iZXIuIElmIHRoZSB1c2Vy
+IGd1ZXNzZXMgdG9vICANCmhpZ2ggb3IgdG9vIGxvdywgdGhlIHByb2dyYW0gc2hvdWxkIG91dHB1
+dCAidG9vIGhpZ2giIG9yICJ0b28gbG93IiAgDQphY2NvcmRpbmdseS4NCg0KVGhlIHByb2dyYW0g
+bXVzdCBsZXQgdGhlIHVzZXIgY29udGludWUgdG8gZ3Vlc3MgdW50aWwgdGhlIHVzZXIgY29ycmVj
+dGx5ICANCmd1ZXNzZXMgdGhlIG51bWJlci4gT3V0cHV0IGhvdyBtYW55IGd1ZXNzZXMgaXQgdG9v
+ayB0aGUgdXNlciB0byBndWVzcyB0aGUgIA0KY29ycmVjdCBudW1iZXIuDQoNCg0KTm90ZTogVXNl
+IHRoZSBzdGFuZGFyZCBsaWJyYXJ5IGZ1bmN0aW9uIHRvIGdlbmVyYXRlIHRoZSByYW5kb20gbnVt
+YmVyOiAgDQpodHRwOi8vZW4uY3BwcmVmZXJlbmNlLmNvbS93L2NwcC9udW1lcmljL3JhbmRvbS9y
+YW5kDQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiAjaW5jbHVkZSA8Y3N0ZGxpYj4gI2luY2x1ZGUg
+PGN0aW1lPiB1c2luZyBuYW1lc3BhY2UgIA0Kc3RkOyBpbnQgbWFpbigpIHsgc3JhbmQodGltZSgw
+KSk7IGludCByYW5kb21OdW1iZXIgPSByYW5kKCkgJSAxMDAgKyAxOyBpbnQgIA0Kbjsgd2hpbGUo
+Y2luPj5uKSBpZihuPnJhbmRvbU51bWJlcil7IGNvdXQ8PCJwb3FyIHRpdiBwb3JkemlyIjw8ZW5k
+bDsgfWVsc2UgIA0KaWYobjxyYW5kb21OdW1iZXIpeyBjb3V0PDwibWVjIHRpdiBwb3JkemlyIjw8
+ZW5kbDsgfWVsc2V7ICANCmNvdXQ8PCJndXNoYWtlY2lyIjw8ZW5kbDsgYnJlYWs7IH0gcmV0dXJu
+IDA7IH0NCg0KDQpXcml0ZSBhIHByb2dyYW0gdG8gaW5wdXQgYSBudW1iZXIgYW5kIGNvbnZlcnQg
+aXQgdG8gYmluYXJ5DQpFeGFtcGxlOg0KSW5wdXQ6DQo1DQpPdXRwdXQ6DQoxMDENCg0KDQojaW5j
+bHVkZSA8aW9zdHJlYW0+ICNpbmNsdWRlIDx2ZWN0b3I+IHVzaW5nIG5hbWVzcGFjZSBzdGQ7IGlu
+dCBtYWluKCkgeyBpbnQgIA0KbjsgY291dCA8PCAiTXV0cWFncmVxIHRpdtWdICI7IGNpbiA+PiBu
+OyBpZihuPT0wKXsgY291dDw8ImJpbmFyeSBrbGluaSAgDQowIjw8ZW5kbDsgfSB2ZWN0b3I8aW50
+PiBiaW5hcnk7IHdoaWxlKG4+MCl7IGJpbmFyeS5wdXNoX2JhY2sobiUyKTsgbi89MjsgfSAgDQpj
+b3V0PDwiYmluYXIgdGVzcW92YCAiOyBmb3IoaW50IGk9YmluYXJ5LnNpemUoKS0xO2k+PTA7aS0t
+KXsgIA0KY291dDw8YmluYXJ5W2ldOyB9IGNvdXQ8PGVuZGw7IHJldHVybiAwOyB9DQoNCg0KQXNz
+dW1lIHRoZSBmb2xsb3dpbmcgdmFyaWFibGUgZGVjbGFyYXRpb25zIG9uIGEgNjQtYml0IHN5c3Rl
+bToNCg0KDQpjaGFyIGE7DQppbnQgYjsNCmZsb2F0IGM7DQpkb3VibGUgZDsNCmxvbmcgZTsNCnNo
+b3J0IGY7DQoNCg0KSG93IG1hbnkgYnl0ZXMgb2YgbWVtb3J5IGFyZSByZXF1aXJlZCBmb3IgZWFj
+aCB2YXJpYWJsZSwgYW5kIHdoYXQgaXMgdGhlICANCnRvdGFsIG1lbW9yeSB1c2VkIGJ5IGFsbCB2
+YXJpYWJsZXM/DQoNCg0KY2hhciBhLSDVvdWhINW/1b7VtdWh1azVttWl1oDVqyDVsNWr1bTVttWh
+1a/VodW2INW/1avVuiDVp+KApNW41oDVqCDVttWl1oDVr9Wh1bXVodaB1bbVuNaC1bQg1acgMSBi
+eXRlOiBpbnQgYiAgDQotaW50LdW41b4g1bDVodW11b/VodaA1aHWgNW41oLVtCDVpdW21oQgYiDV
+odW21bjWgtW21bjVviDWg9W41oPVuNWt1aHVr9Wh1bYs1bjWgNWr1bYg1a/VodaA1bjVsiDVpdW2
+1oQg1bDVpdW/1bgg1aHWgNWq1aXWhCAgDQrVvtWl1oDVodWj1oDVpdWsLNW91aEg1bbVpdaA1a/V
+odW11aHWgdW21bjWgtW0INWnIDQgYnl0ZTogZmxvYXQgYyAtINW91oDVodW21bjVviDVsNWh1bXV
+v9Wh1oDVodaA1bjWgtW0INWl1bbWhCBjICANCtWh1bbVuNaC1bbVuNW+INaD1bjWg9W41a3VodWv
+1aHVtizVuNaA1agg1a/VodaA1bjVsiDVpyDVutWh1bDVpdWsINWs1bjVstWh1oHVuNWyINWv1aXV
+v9W41b4g1avWgNWh1a/VodW2INWp1avVvizWhdaA1avVttWh1a8g1Z0gIA0KMy4xNCwtMC4wMDEs
+My4wLNW91aEg1bbVpdaA1a/VodW11aHWgdW21bjWgtW0INWnIDQgYnl0ZTogZG91YmxlIGQtINW9
+1oDVodW21bjVviDVsNWh1bXVv9Wh1oDVodaA1bjWgtW0INWl1bbWhCAgDQpkINWh1bbVuNaC1bbV
+uNW+INaD1bjWg9W41a3VodWv1aHVtizVuNaA1agg1aHVvtWl1azVqyDVs9W31aPWgNWr1b8g1a/V
+odaA1bjVsiDVpyDVutWh1bDVpdWsINWs1bjVstWh1oHVuNWyINWv1aXVv9W41b4g1avWgNWh1a/V
+odW2ICANCtWp1avVviAs1oXVudWr1bbVodWvINWdIDMuMTQxNTkyNjUzNSzVttWl1oDVr9Wh1bXV
+odaB1bbVuNaC1bQg1acgOGJ5dGU6IGxvbmcgZS0g1bDVodW11b/VodaA1aHWgNW41oLVtCDVpdW2
+1oQgZSAgDQrVodW21bjWgtW21bjVviDWg9W41oPVuNWt1aHVr9Wh1bYgLNW41oDVqCDVr9Wh1oDV
+pdWs1asg1acg1aHVvdWl1awgaW50INW/1avVutWrINWnINWm1bjWgtW/INWh1b7VpdWs1asg1bTV
+pdWuINWh1bTVotW41bLVuyDVqdWr1b4g1acgIA0K1brVodWw1bjWgtW0LNW21aXWgNWv1aHVtdWh
+1oHVttW41oLVtCDVpyA4Ynl0ZTogc2hvcnQgZuKAkyDVsNWh1bXVv9Wh1oDVodaA1bjWgtW0INWl
+1bbWhCBmINWh1bbVuNaC1bbVuNW+ICANCtaD1bjWg9W41a3VodWv1aHVtiAs1bjWgNWoINWv1aHW
+gNWl1azVqyDVpyDVodW91aXVrCBpbnQg1b/Vq9W61asg1acg1abVuNaC1b8g1aHVvtWl1azVqyDW
+g9W41afWgCDVodW01aLVuNWy1bsg1anVq9W+INWnICANCtW61aHVsNW41oLVtCzVttWl1oDVr9Wh
+1bXVodaB1bbVuNaC1bQg1acgMmJ5dGU6DQoNCg0KSW4gQysrLCBjb25zaWRlciB0aGUgZm9sbG93
+aW5nIGNvZGU6DQoNCg0KZmxvYXQgZiA9IDMuMTRmOw0KaW50IGkgPSBzdGF0aWNfY2FzdDxpbnQ+
+KGYpOw0KDQoNCmEpIFdoYXQgaGFwcGVucyBpbiBtZW1vcnkgd2hlbiBzdGF0aWNfY2FzdCBpcyB1
+c2VkIGluIHRoaXMgY2FzZT8NCmIpIFdoYXQgdmFsdWUgd2lsbCBiZSBzdG9yZWQgaW4gaSwgYW5k
+IHdoeT8NCg0KDQrVoSkg1brVodW/1bPVpdW21bjWgtW0INWnIGZsb2F0LdWrINWh1oDVqtWl1oTV
+qCDWhyDVvtWl1oDVodaD1bjVrdW41oLVtCDVodW11bYgaW50LdWrINaHINWv1bjVv9W41oDVodWv
+1aHVtdWr1bYg1bTVodW91aggIA0K1a/VuNaA1bnVuNaC1bQg1afWiSDVoinVpdaA1aIg1oXVo9W2
+1aHVo9W41oDVrtW41oLVtCDVpdW21oQgc3RhdGljX2Nhc3Q8aW50PihmKSDVodaA1aTVtdW41oLV
+ttaE1agg1a/VpNWh1bzVttWhIDPWiQ0KDQoNCldoYXQgaGFwcGVucyBpZiB5b3UgZGl2aWRlIGFu
+IGludGVnZXIgYnkgemVybyBpbiBDKys/IFdoYXQgYWJvdXQgZGl2aWRpbmcgYSAgDQpmbG9hdGlu
+Zy1wb2ludCBudW1iZXIgYnkgemVybz8NCg0KDQowLdWrINWi1aHVqtWh1bbVpdWs1avVvSDVr9W/
+1brVqyBVbmRlZmluZWQgQmVoYXZpb3IhINWr1b3VryBmbG9hdOKAk9WoIDAt1asg1b7WgNWhINWi
+1aHVqtWh1bbVpdWs1avVvSDVpdWp1aUgIA0KZmxvYXQt1agg1aTWgNWh1a/VodW2INWp1avVviDV
+pyAraW5mICzVpdWp1aUg1aLVodaB1aHVvdWh1a/VodW2IC1pbmY6INS71b3VryAwLzAgTmFOKE5v
+dCBhIE51bWJlcik6DQoNCg0KV2hhdCBpcyB0aGUgcmVzdWx0IG9mIHRoZSBmb2xsb3dpbmcgZXhw
+cmVzc2lvbiBhbmQgd2h5Pw0KDQoNCmludCB4ID0gNTsNCmludCB5ID0geCsrICsgKyt4Ow0KDQoN
+CngrK+KAk9WoIHBvc3RmaXgg1acg1Z0g1aHVtdW91avVttaE1bYg1b3Vr9Wm1aLVq9aBINaF1aPV
+v9Wh1aPVuNaA1a7VvtW41oLVtCDVpyDVodaA1arVpdaE1agg1bDVpdW/1bgg1bbVuNaAICANCtWh
+1b7VpdWs1aHVttW41oLVtCzVodW11b3Vq9W21oTVtiDVr9Ws1avVttWrIDUgLCDVr9Wk1aHVvNW2
+1aEgNiwrK3gt1aggcHJlZml4INWnINWh1bXVvdWr1bbWhNW2IDbVqCDVr9Wk1aHVvNW21aEgNyDV
+ttW41oAgIA0K1a/WhdWj1b/VodWj1bjWgNWu1b7VqyDVodW11aTVutWl1b0g1a/VvdW/1aHVttWh
+1bbWhCA1Kzc9MTINCg0KDQpDcmVhdGUgeW91ciBvd24gR29vZ2xlIEZvcm0NCg0KRG9lcyB0aGlz
+IGZvcm0gbG9vayBzdXNwaWNpb3VzPyBSZXBvcnQNCg0KDQo=
+--0000000000001450be0638c87799
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"5BzphvlTwJ7DdqnZi5RR5Q">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"5BzphvlTwJ7DdqnZi5RR5Q">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(103,58,183);" width=3D"100%" role=3D"presentation"><tbody><tr heigh=
+t=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_white_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(237,231,246);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out =
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSeBm2CvYksRLil8qm0QxR4n=
+wlvWCVmjLTuPZ98H5kfH84P-kQ/viewform?usp=3Dmail_form_link" target=3D"_blank"=
+ style=3D"white-space: pre-wrap;">C++ Fundamentals 1 (Types, Statements, Lo=
+ops)<span></span></a></h1>Here's what was received.</div><div style=3D"bord=
+er-bottom: 1px solid #dadce0; border-left: 1px solid #dadce0; border-right:=
+ 1px solid #dadce0; border-top: 8px solid rgb(103,58,183); padding: 20px;ba=
+ckground-color: #fff; border-radius: 8px; margin-bottom: 12px;"><h1 dir=3D"=
+ltr" style=3D"font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 32p=
+x; font-weight: 400; line-height: 42px;white-space: pre-wrap;margin: 0 0 12=
+px;">C++ Fundamentals 1 (Types, Statements, Loops)<span></span></h1><div st=
+yle=3D"white-space: pre-wrap;margin-bottom: 12px;"></div><div dir=3D"ltr">Y=
+our email (<b>muradyanmanvel65@gmail.com</b>) was recorded when you submitt=
+ed this form.</div></div><div style=3D"border: 1px solid #dadce0; padding: =
+20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;m=
+argin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+ 0 16px;"><strong>Write a C++ program</strong> that asks the user to enter =
+a <strong>positive integer</strong>, and then prints the <strong>factorial<=
+/strong> of that number.<div><br></div><div><b>Example</b><br><b>Input</b>:=
+<br>=C2=A0 =C2=A0 5<br><b>Output</b>:<br>=C2=A0 =C2=A0 Factorial of 5 is 12=
+0<br></div></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" sty=
+le=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);marg=
+in: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+int main() {
+=20
+ int a , equal=3D1;
+ cin &gt;&gt; a;
+ while(a&gt;0) {
+    equal *=3D a;
+    a --;
+ }
+ cout &lt;&lt; equal &lt;&lt; endl;
+ return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=C2=A0Write a C++ program that takes an integer input from the user and=
+ calculates the sum of its digits.<br><br><b>Input:<br></b>=C2=A0 =C2=A0 12=
+34<br><b>Output</b>:<br>=C2=A0 =C2=A0 Sum of digits: 10<br></h2></div><div =
+style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap=
+;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height:=
+ 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+   =20
+    int sum=3D0;
+    int tiv=3Dnum;
+   =20
+    if (tiv&lt;0){
+        tiv=3D-tiv;
+    }
+    while(tiv&gt;0){
+        sum+=3Dtiv%10;
+        tiv/=3D10;
+    }
+ cout&lt;&lt;sum&lt;&lt;endl;
+ return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">Write a simple calculator program in C++ that takes two numbers and an =
+operator (+, -, *, /) as input.<br><div><br></div><div><b>Input:<br></b>=C2=
+=A0 =C2=A0 5 3 +<br><b>Output:<br></b>=C2=A0 =C2=A0 Result: 8<br></div></h2=
+></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-spa=
+ce: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px;=
+ min-height: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int a,b;
+    char nshan;
+    cin&gt;&gt;a&gt;&gt;b&gt;&gt;nshan;
+    double result;
+    switch(nshan){
+        case&#39;+&#39;:
+        result=3Da+b;
+        break;
+       =20
+        case &#39;-&#39;:
+        result=3Da-b;
+        break;
+       =20
+        case &#39;*&#39;:
+        result=3Da*b;
+        break;
+       =20
+        case &#39;/&#39;:
+            if(b=3D=3D0){
+                cout&lt;&lt;&quot;error&quot;&lt;&lt;endl;
+                return 1;
+            }else result=3Da/b;
+            break;
+       =20
+        default:
+        cout &lt;&lt; &quot;Error: Invalid operator\n&quot;;
+       =20
+    }
+   =20
+    cout&lt;&lt;&quot;result is &quot;&lt;&lt;result&lt;&lt;endl;
+   =20
+ return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><p>=C2=A0Write a C++ program that takes an integer as input and determi=
+nes whether it is a prime or composite number.<br><span><br></span></p><p><=
+span><b>Example<br>Input:<br></b></span><span>7<br></span><span><b>Output:<=
+br></b></span><span>7 is a prime number.</span></p></h2></div><div style=3D=
+"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;wi=
+dth: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+   int a;
+   cin&gt;&gt;a;
+  =20
+   if(a&lt;=3D1){
+       cout&lt;&lt;a&lt;&lt;&quot;-n parz kam baxadryal che&quot;&lt;&lt;en=
+dl;
+       return 0;
+   }
+   bool parz=3Dtrue;
+   for(int i=3D2;i&lt;a;++i)
+       if (a%i=3D=3D0){
+       parz =3D false;
+       break;
+       }
+   if(parz)
+    cout&lt;&lt;a&lt;&lt;&quot;tivy parz tiv e&quot;&lt;&lt;endl;
+   else=20
+    cout&lt;&lt;a&lt;&lt;&quot;tivy baxadryal tiv e&quot;&lt;&lt;endl;
+      =20
+   =20
+ return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><div>Write a program that will input an integer number and calculate th=
+e inverse of the number. Print the output.<br><b><br></b></div><div><b>Exam=
+ple:</b>=C2=A0<br>=C2=A0 =C2=A0<b>Input:</b>=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0163<br>=C2=A0 =C2=A0<b>Output:</b><br>=C2=A0 =C2=A0 =C2=A0 =C2=A0361<=
+/div></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"=
+white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12=
+px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n,reversed=3D0;
+    cout&lt;&lt;&quot;mutqagreq amboxj tiv&quot;&lt;&lt;endl;
+    cin&gt;&gt;n;
+    while(n!=3D0){
+    int tvanshan=3Dn%10;
+    reversed=3Dreversed*10 + tvanshan;
+    n/=3D10;
+   =20
+    }
+    cout&lt;&lt;&quot;hakadardzy `&quot;&lt;&lt;reversed;
+return 0;   =20
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">Write a program that will input two integers - N and M. The program shou=
+ld "draw" a rectangle of NxM size using "*", "/", "\" and spaces.<br><br><b=
+r><b>Example</b>:<br>=C2=A0 =C2=A0<b>Input</b>:=C2=A0<br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A06 4<br>=C2=A0 =C2=A0<b>Output</b>:=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0/****\=C2=A0 =C2=A0 =C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0*=C2=A0 =C2=
+=A0 =C2=A0 *<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0*=C2=A0 =C2=A0 =C2=A0 *<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0\****/<br></h2></div><div style=3D"padding: 0 12px;=
+"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotte=
+d rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#incl=
+ude &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int N, M;
+    cout &lt;&lt; &quot;Mutqagreq laynutyuny &quot;;
+    cin &gt;&gt; N ;
+    cout&lt;&lt; &quot;Mutqagreq bardzrutyuny &quot;;
+    cin&gt;&gt;M;
+   =20
+    cout&lt;&lt;&quot;/&quot;;
+    for(int i=3D0;i&lt;N-2;i++)cout&lt;&lt;&quot;*&quot;;
+    cout&lt;&lt;&quot;\\&quot;&lt;&lt;endl;
+   =20
+    for(int i=3D0;i&lt;M-2;i++){
+        cout&lt;&lt;&quot;*&quot;;
+    for (int j=3D0;j&lt;N-2;j++)cout&lt;&lt;&quot; &quot;;
+        cout&lt;&lt;&quot;*&quot;&lt;&lt;endl;
+   =20
+    }
+    cout&lt;&lt;&quot;\\&quot;;
+    for(int i=3D0;i&lt;N-2;i++)cout&lt;&lt;&quot;*&quot;;
+    cout&lt;&lt;&quot;/&quot;;
+   =20
+   =20
+return 0;   =20
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">Write a program that calculates a random number from 1 through 100. The =
+program then asks the user to guess the number. If the user guesses too hig=
+h or too low, the program should output "too high" or "too low" accordingly=
+.<br><br>The program must let the user continue to guess until the user cor=
+rectly guesses the number. Output how many guesses it took the user to gues=
+s the correct number.<br><br><br><b>Note</b>:=C2=A0Use the standard library=
+ function to generate the random number: http://en.cppreference.com/w/cpp/n=
+umeric/random/rand<br></h2></div><div style=3D"padding: 0 12px;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;io=
+stream&gt;
+#include &lt;cstdlib&gt; =20
+#include &lt;ctime&gt;   =20
+using namespace std;
+
+int main() {
+    srand(time(0));=20
+
+    int randomNumber =3D rand() % 100 + 1;=20
+    int n;
+   =20
+    while(cin&gt;&gt;n)
+    if(n&gt;randomNumber){
+        cout&lt;&lt;&quot;poqr tiv pordzir&quot;&lt;&lt;endl;
+    }else if(n&lt;randomNumber){
+        cout&lt;&lt;&quot;mec tiv pordzir&quot;&lt;&lt;endl;
+    }else{ cout&lt;&lt;&quot;gushakecir&quot;&lt;&lt;endl;
+   =20
+        break;
+    }
+    return 0;
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">Write a program to input a number and convert it to binary<br><b>Example=
+</b>:<br><b>=C2=A0 =C2=A0 Input</b>:=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 5=
+<br><b>=C2=A0 =C2=A0 Output</b>:=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 101=
+=C2=A0<br></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" styl=
+e=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margi=
+n: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; &quot;Mutqagreq tiv=D5=9D &quot;;
+    cin &gt;&gt; n;
+    if(n=3D=3D0){
+        cout&lt;&lt;&quot;binary klini 0&quot;&lt;&lt;endl;
+    }
+    vector&lt;int&gt; binary;
+   =20
+    while(n&gt;0){
+        binary.push_back(n%2);
+        n/=3D2;
+    }
+    cout&lt;&lt;&quot;binar tesqov` &quot;;
+    for(int i=3Dbinary.size()-1;i&gt;=3D0;i--){
+        cout&lt;&lt;binary[i];
+    }
+    cout&lt;&lt;endl;
+   =20
+return 0;  =20
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;"><p>Assume the following variable declarations on a 64-bit system:</p><p>=
+=C2=A0</p><p>char a;<br>
+int b;<br>
+float c;<br>
+double d;<br>
+long e;<br>
+short f;</p><p>=C2=A0</p><p>How many bytes of memory are required for each =
+variable, and what is the total memory used by all variables?</p></h2></div=
+><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pr=
+e-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-h=
+eight: 20px;width: 100%;">char a- =D5=BD=D5=A1 =D5=BF=D5=BE=D5=B5=D5=A1=D5=
+=AC=D5=B6=D5=A5=D6=80=D5=AB =D5=B0=D5=AB=D5=B4=D5=B6=D5=A1=D5=AF=D5=A1=D5=
+=B6 =D5=BF=D5=AB=D5=BA =D5=A7=E2=80=A4=D5=B8=D6=80=D5=A8 =D5=B6=D5=A5=D6=80=
+=D5=AF=D5=A1=D5=B5=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 1 byte:
+int b -int-=D5=B8=D5=BE =D5=B0=D5=A1=D5=B5=D5=BF=D5=A1=D6=80=D5=A1=D6=80=D5=
+=B8=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 b =D5=A1=D5=B6=D5=B8=D6=82=D5=B6=D5=B8=
+=D5=BE =D6=83=D5=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=D5=A1=D5=B6,=D5=B8=D6=80=
+=D5=AB=D5=B6 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A5=D5=B6=D6=84 =D5=B0=D5=A5=
+=D5=BF=D5=B8 =D5=A1=D6=80=D5=AA=D5=A5=D6=84 =D5=BE=D5=A5=D6=80=D5=A1=D5=A3=
+=D6=80=D5=A5=D5=AC,=D5=BD=D5=A1 =D5=B6=D5=A5=D6=80=D5=AF=D5=A1=D5=B5=D5=A1=
+=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 4 byte:
+float c - =D5=BD=D6=80=D5=A1=D5=B6=D5=B8=D5=BE =D5=B0=D5=A1=D5=B5=D5=BF=D5=
+=A1=D6=80=D5=A1=D6=80=D5=B8=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 c =D5=A1=D5=B6=
+=D5=B8=D6=82=D5=B6=D5=B8=D5=BE =D6=83=D5=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=
+=D5=A1=D5=B6,=D5=B8=D6=80=D5=A8 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A7 =D5=
+=BA=D5=A1=D5=B0=D5=A5=D5=AC =D5=AC=D5=B8=D5=B2=D5=A1=D6=81=D5=B8=D5=B2 =D5=
+=AF=D5=A5=D5=BF=D5=B8=D5=BE =D5=AB=D6=80=D5=A1=D5=AF=D5=A1=D5=B6 =D5=A9=D5=
+=AB=D5=BE,=D6=85=D6=80=D5=AB=D5=B6=D5=A1=D5=AF =D5=9D 3.14,-0.001,3.0,=D5=
+=BD=D5=A1 =D5=B6=D5=A5=D6=80=D5=AF=D5=A1=D5=B5=D5=A1=D6=81=D5=B6=D5=B8=D6=
+=82=D5=B4 =D5=A7 4 byte:
+double d-  =D5=BD=D6=80=D5=A1=D5=B6=D5=B8=D5=BE =D5=B0=D5=A1=D5=B5=D5=BF=D5=
+=A1=D6=80=D5=A1=D6=80=D5=B8=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 d =D5=A1=D5=B6=
+=D5=B8=D6=82=D5=B6=D5=B8=D5=BE =D6=83=D5=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=
+=D5=A1=D5=B6,=D5=B8=D6=80=D5=A8 =D5=A1=D5=BE=D5=A5=D5=AC=D5=AB =D5=B3=D5=B7=
+=D5=A3=D6=80=D5=AB=D5=BF =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A7 =D5=BA=D5=A1=
+=D5=B0=D5=A5=D5=AC =D5=AC=D5=B8=D5=B2=D5=A1=D6=81=D5=B8=D5=B2 =D5=AF=D5=A5=
+=D5=BF=D5=B8=D5=BE =D5=AB=D6=80=D5=A1=D5=AF=D5=A1=D5=B6 =D5=A9=D5=AB=D5=BE =
+,=D6=85=D5=B9=D5=AB=D5=B6=D5=A1=D5=AF =D5=9D 3.1415926535,=D5=B6=D5=A5=D6=
+=80=D5=AF=D5=A1=D5=B5=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 8byte:
+long e- =D5=B0=D5=A1=D5=B5=D5=BF=D5=A1=D6=80=D5=A1=D6=80=D5=B8=D6=82=D5=B4 =
+=D5=A5=D5=B6=D6=84 e =D5=A1=D5=B6=D5=B8=D6=82=D5=B6=D5=B8=D5=BE =D6=83=D5=
+=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=D5=A1=D5=B6 ,=D5=B8=D6=80=D5=A8 =D5=AF=D5=
+=A1=D6=80=D5=A5=D5=AC=D5=AB =D5=A7 =D5=A1=D5=BD=D5=A5=D5=AC int =D5=BF=D5=
+=AB=D5=BA=D5=AB =D5=A7 =D5=A6=D5=B8=D6=82=D5=BF =D5=A1=D5=BE=D5=A5=D5=AC=D5=
+=AB =D5=B4=D5=A5=D5=AE =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =D5=A9=D5=AB=D5=
+=BE =D5=A7 =D5=BA=D5=A1=D5=B0=D5=B8=D6=82=D5=B4,=D5=B6=D5=A5=D6=80=D5=AF=D5=
+=A1=D5=B5=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 8byte:
+short f=E2=80=93 =D5=B0=D5=A1=D5=B5=D5=BF=D5=A1=D6=80=D5=A1=D6=80=D5=B8=D6=
+=82=D5=B4 =D5=A5=D5=B6=D6=84 f =D5=A1=D5=B6=D5=B8=D6=82=D5=B6=D5=B8=D5=BE =
+=D6=83=D5=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=D5=A1=D5=B6 ,=D5=B8=D6=80=D5=A8 =
+=D5=AF=D5=A1=D6=80=D5=A5=D5=AC=D5=AB =D5=A7 =D5=A1=D5=BD=D5=A5=D5=AC int =
+=D5=BF=D5=AB=D5=BA=D5=AB =D5=A7 =D5=A6=D5=B8=D6=82=D5=BF =D5=A1=D5=BE=D5=A5=
+=D5=AC=D5=AB =D6=83=D5=B8=D5=A7=D6=80 =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =
+=D5=A9=D5=AB=D5=BE =D5=A7 =D5=BA=D5=A1=D5=B0=D5=B8=D6=82=D5=B4,=D5=B6=D5=A5=
+=D6=80=D5=AF=D5=A1=D5=B5=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 2byte:<=
+/div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12p=
+x;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bo=
+ttom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"colo=
+r: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; =
+font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;=
+"><p>In C++, consider the following code:</p><p>=C2=A0</p><p>float f =3D 3.=
+14f;<br>
+int i =3D static_cast&lt;int&gt;(f);</p><p>=C2=A0</p><p>a) What happens in =
+memory when static_cast is used in this case?<br>
+b) What value will be stored in i, and why?</p></h2></div><div style=3D"pad=
+ding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bott=
+om: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width:=
+ 100%;">=D5=A1) =D5=BA=D5=A1=D5=BF=D5=B3=D5=A5=D5=B6=D5=B8=D6=82=D5=B4 =D5=
+=A7 float-=D5=AB =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8 =D6=87 =D5=BE=D5=A5=
+=D6=80=D5=A1=D6=83=D5=B8=D5=AD=D5=B8=D6=82=D5=B4 =D5=A1=D5=B5=D5=B6 int-=D5=
+=AB =D6=87 =D5=AF=D5=B8=D5=BF=D5=B8=D6=80=D5=A1=D5=AF=D5=A1=D5=B5=D5=AB=D5=
+=B6 =D5=B4=D5=A1=D5=BD=D5=A8 =D5=AF=D5=B8=D6=80=D5=B9=D5=B8=D6=82=D5=B4 =D5=
+=A7=D6=89
+=D5=A2)=D5=A5=D6=80=D5=A2 =D6=85=D5=A3=D5=B6=D5=A1=D5=A3=D5=B8=D6=80=D5=AE=
+=D5=B8=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 static_cast&lt;int&gt;(f) =D5=A1=D6=
+=80=D5=A4=D5=B5=D5=B8=D6=82=D5=B6=D6=84=D5=A8 =D5=AF=D5=A4=D5=A1=D5=BC=D5=
+=B6=D5=A1 3=D6=89</div></div></div><div style=3D"border: 1px solid #dadce0;=
+ padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bott=
+om: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"a=
+uto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap=
+;margin: 0 0 16px;"><p>What happens if you divide an integer by zero in C++=
+? What about dividing a floating-point number by zero?</p></h2></div><div s=
+tyle=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;=
+border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: =
+20px;width: 100%;">0-=D5=AB =D5=A2=D5=A1=D5=AA=D5=A1=D5=B6=D5=A5=D5=AC=D5=
+=AB=D5=BD =D5=AF=D5=BF=D5=BA=D5=AB Undefined Behavior!
+=D5=AB=D5=BD=D5=AF float=E2=80=93=D5=A8 0-=D5=AB =D5=BE=D6=80=D5=A1 =D5=A2=
+=D5=A1=D5=AA=D5=A1=D5=B6=D5=A5=D5=AC=D5=AB=D5=BD =D5=A5=D5=A9=D5=A5 float-=
+=D5=A8 =D5=A4=D6=80=D5=A1=D5=AF=D5=A1=D5=B6 =D5=A9=D5=AB=D5=BE =D5=A7 +inf =
+,=D5=A5=D5=A9=D5=A5 =D5=A2=D5=A1=D6=81=D5=A1=D5=BD=D5=A1=D5=AF=D5=A1=D5=B6 =
+-inf:
+=D4=BB=D5=BD=D5=AF 0/0 NaN(Not a Number):</div></div></div><div style=3D"bo=
+rder: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; border-=
+radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"paddin=
+g: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,He=
+lvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24=
+px;white-space: pre-wrap;margin: 0 0 16px;"><p>What is the result of the fo=
+llowing expression and why?</p>
+<div><div>int x =3D 5;<br>int y =3D x++ + ++x;<br></div><div dir=3D"ltr"></=
+div></div></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" styl=
+e=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margi=
+n: 12px 0 8px; min-height: 20px;width: 100%;">x++=E2=80=93=D5=A8 postfix =
+=D5=A7 =D5=9D =D5=A1=D5=B5=D5=BD=D5=AB=D5=B6=D6=84=D5=B6 =D5=BD=D5=AF=D5=A6=
+=D5=A2=D5=AB=D6=81 =D6=85=D5=A3=D5=BF=D5=A1=D5=A3=D5=B8=D6=80=D5=AE=D5=BE=
+=D5=B8=D6=82=D5=B4 =D5=A7 =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8 =D5=B0=D5=A5=
+=D5=BF=D5=B8 =D5=B6=D5=B8=D6=80 =D5=A1=D5=BE=D5=A5=D5=AC=D5=A1=D5=B6=D5=B8=
+=D6=82=D5=B4,=D5=A1=D5=B5=D5=BD=D5=AB=D5=B6=D6=84=D5=B6 =D5=AF=D5=AC=D5=AB=
+=D5=B6=D5=AB 5 , =D5=AF=D5=A4=D5=A1=D5=BC=D5=B6=D5=A1 6,++x-=D5=A8 prefix =
+=D5=A7 =D5=A1=D5=B5=D5=BD=D5=AB=D5=B6=D6=84=D5=B6 6=D5=A8 =D5=AF=D5=A4=D5=
+=A1=D5=BC=D5=B6=D5=A1 7 =D5=B6=D5=B8=D6=80 =D5=AF=D6=85=D5=A3=D5=BF=D5=A1=
+=D5=A3=D5=B8=D6=80=D5=AE=D5=BE=D5=AB=20
+=D5=A1=D5=B5=D5=A4=D5=BA=D5=A5=D5=BD =D5=AF=D5=BD=D5=BF=D5=A1=D5=B6=D5=A1=
+=D5=B6=D6=84 5+7=3D12</div></div></div></div><table align=3D"center" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"max-width: 672px; min-width: 154px; =
+border-collapse: separate; border-spacing: 0 0.2em;" width=3D"100%" role=3D=
+"presentation"><tbody><tr height=3D"24px"><td></td></tr><tr><td><a href=3D"=
+https://docs.google.com/forms?usp=3Dmail_form_link" style=3D"color: #424242=
+; font-size: 13px;">Create your own Google Form</a></td></tr><tr><td>Does t=
+his form look suspicious? <a href=3D"https://drive.google.com/u/0/abuse?id=
+=3DAKkXjoxhQ8pGsrcPTZjW86r7aRgoK3voE9-nFwWRmX7AVh0ESstkcNXcGf0t7fCTlnleg-i8=
+v5_X8sDiFAl6o08:0&amp;docurl=3Dhttps://docs.google.com/forms/u/0/d/e/1FAIpQ=
+LSeBm2CvYksRLil8qm0QxR4nwlvWCVmjLTuPZ98H5kfH84P-kQ/formResponse&amp;usp=3Dm=
+ail_receipt_abuse" target=3D"_blank" style=3D"color: #424242; font-size: 13=
+px;">Report</a></td></tr></tbody></table></div></body></html>
+--0000000000001450be0638c87799--
