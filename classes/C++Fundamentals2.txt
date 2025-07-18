@@ -1,0 +1,1364 @@
+Delivered-To: muradyanmanvel65@gmail.com
+Received: by 2002:a05:6200:628d:b0:5a9:3124:a43c with SMTP id gp13csp2063865qnb;
+        Thu, 3 Jul 2025 05:04:51 -0700 (PDT)
+X-Received: by 2002:a05:622a:15c1:b0:4a4:41c0:b256 with SMTP id d75a77b69052e-4a987960414mr54424761cf.11.1751544291146;
+        Thu, 03 Jul 2025 05:04:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751544291; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CLXRoDqSXOAl0RsFcp+pyvsBvuLwC5ZMdDPs64NaLFxCEn0i9VdDgQT+nuaS9HOXhi
+         s7BYxO6/e/4+nTMq9OmibYSp0Z1vbxUX4a9uwH+Ke/7JPN2MELgTvgJZqcYGAzWHLAx/
+         tH3xfJWVZ3d9VuINag4tyNgSlbFuTtWiog+qhgxmm/zbeMx6FLLGew0cxsBIlAhT6VjR
+         fsR0zRuYndu66iWPn5pCn5xTQ718iUVh/cETRccE64gHdLEQrGAMGlV1bERGkmSOiSbN
+         s/VfbZxMnTC+Ri7sj3kSWYMLI8EsTVUnv9lMdobj33a9w4/X61exREHgjl/tvmmoEdcL
+         FJIQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=zS7wiyjnWbIaxDpLNjjhQiv6lS7C27xBOQkPyLwD8Mo=;
+        fh=2N85UJKi3UYSz8m8gKFw4u4ZYxO7IpG9QsLYUg5sqqg=;
+        b=aAEg9xyx1o7akKS+YbXfT1hiawO/GgGaCI4hVlKQIGIclkvjPNUtSLcd6xfSzSUkrg
+         87h5Sg8ZYa2Eg30y8ByX7YXQS9BL6dUYUvcRqqu83wtJmPouYefWCUOfkIvjUDZQ92QH
+         Zp6+q4OcQjuZFGxd8WRaKHpnpPPUqzWrNJvu/s5QUyNYyMtv7LYlq+ztP2UWYHHvCNHm
+         sYQATZB9lwEQwlsz2omtya8rOhiKY9F9yPaRUBgePQWURavUUO0uYOwtYx2oJeR5xF9X
+         18GCAmDJT22acDytS1A7mEaPS5f8Itty59pJ2TW8hc9uAkZ6b3Gx6ArGEQxEP++WV9ur
+         Y2uw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=XxyXNiM7;
+       spf=pass (google.com: domain of 34nfmabykakkoxavb-anlnrycb-wxanyuhpxxpun.lxv@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=34nFmaBYKAKkOXaVb-aNLNRYcb-WXaNYUhPXXPUN.LXV@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <34nFmaBYKAKkOXaVb-aNLNRYcb-WXaNYUhPXXPUN.LXV@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id d75a77b69052e-4a7fbff576asor172802121cf.0.2025.07.03.05.04.50
+        for <muradyanmanvel65@gmail.com>
+        (Google Transport Security);
+        Thu, 03 Jul 2025 05:04:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 34nfmabykakkoxavb-anlnrycb-wxanyuhpxxpun.lxv@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=XxyXNiM7;
+       spf=pass (google.com: domain of 34nfmabykakkoxavb-anlnrycb-wxanyuhpxxpun.lxv@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=34nFmaBYKAKkOXaVb-aNLNRYcb-WXaNYUhPXXPUN.LXV@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1751544290; x=1752149090; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=zS7wiyjnWbIaxDpLNjjhQiv6lS7C27xBOQkPyLwD8Mo=;
+        b=XxyXNiM7reKazqQXMU26yHGtTkz8KeoWUFKnTVxKofDtyCj0P2RMbfu9SsuVy8aMvk
+         Gdl+opuQbpsx/yE0w6g2ufRUgc6iw05rN5zmhJ63abveT1fHcHVeond/e57Xq8SMUwiJ
+         ZiupGjIFFy/IOm1Kx4EDUCm6Ur+2Ws/nlqTtdNn+nHUduQQgVry3D8GsQX1RVEqDrK2w
+         asRPUr6NIuU1dziSAcGbhpItJS0x+j8/4hvn41fgFVIdU8VMaU+iwcMoqsntWfLG6BZF
+         y/G1+V6y98modH7CxYPmfJCS2iM4Ff/h+yRLNCslesu5hEyIz9dvLoKL+qKYDBbi5uiu
+         qQEw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1751544290; x=1752149090;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=zS7wiyjnWbIaxDpLNjjhQiv6lS7C27xBOQkPyLwD8Mo=;
+        b=vox4UN9ZipOjxag2odNcOtVB+qTHDnXqqNDyU+TBqviEteDQNHnZ6Lo1dShB2u3zVX
+         6Jr6az7GeFvu6IAh3dYbc/0gKJoI8hHMDDltlvLFmWakAnKMqbxPgv3z+p3Ti8TJdETH
+         6icW12VtvKRLuT68zWpUHS23ol14TRmiSa1rvFqBZb1sHjLNl/1/SmglpWE7C/y08Ktq
+         L75D0M5SSy65zcMpr4t43RiltiCIwpHJe6PT0cVQQaFdyuubx2Sv3AS+OjMQoIBOljXX
+         Y997Y8ygyifJCQeNy2cv4ZUzQ4HbAOwVTH+1+gSZWsm4MvWMTpE1Ap7/PQWluf3FXqT/
+         Vyyw==
+X-Gm-Message-State: AOJu0Yype1B9zn9DlKjvU5eGcdP0Fv3qwlLHm9eT6ddV7KU9nUfEmO3t
+	oTskkn05/levr/uOzPWO6KoctQwIC4KxM+NtPr7jOiE6fDryw3SMHJAAdeR42x6BWb05ORo4OXl
+	kfIJrADIVLy9Xd7xOBGJjrhVo6G7m9lemhXDp640=
+X-Google-Smtp-Source: AGHT+IHvGH9miwvnG0lcwE2hxAOJX3DoZEa4IfBy68X8VXFWbPBMJUNtqcDUB1mhBELZMEPmuXQg43/WKTP9uUTJiZOX8w==
+MIME-Version: 1.0
+X-Received: by 2002:a05:622a:15c1:b0:4a4:41c0:b256 with SMTP id
+ d75a77b69052e-4a987960414mr54423821cf.11.1751544290241; Thu, 03 Jul 2025
+ 05:04:50 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSe8LZDvvQRgntDTrfB9eQVt8d_ht3D4M17Epp_1x7i42Grplg
+X-GoogleForms-IsConsumerForm: true
+Message-ID: <autogen-java-486582ea-02dc-464a-ab85-be67f270dabc@google.com>
+Date: Thu, 03 Jul 2025 12:04:50 +0000
+Subject: C++ Fundamentals 2 (Memory, arrays, matrixes, simple functions)
+From: Google Forms <forms-receipts-noreply@google.com>
+To: muradyanmanvel65@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003a82fc0639052f8f"
+
+--0000000000003a82fc0639052f8f
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIG91dCBDKysgRnVuZGFtZW50YWxz
+IDIgKE1lbW9yeSwgYXJyYXlzLCBtYXRyaXhlcywgc2ltcGxlICANCmZ1bmN0aW9ucykNCkhlcmUn
+cyB3aGF0IHdhcyByZWNlaXZlZC4NCg0KDQpDKysgRnVuZGFtZW50YWxzIDIgKE1lbW9yeSwgYXJy
+YXlzLCBtYXRyaXhlcywgc2ltcGxlIGZ1bmN0aW9ucykNCg0KDQpZb3VyIGVtYWlsIChtdXJhZHlh
+bm1hbnZlbDY1QGdtYWlsLmNvbSkgd2FzIHJlY29yZGVkIHdoZW4geW91IHN1Ym1pdHRlZCAgDQp0
+aGlzIGZvcm0uDQoNCg0KV2hhdCB3aWxsIHByaW50IHRoZSBmb2xsb3dpbmcgcHJvZ3JhbT8NCg0K
+DQppbnQgaUEgPSA2Ow0KaW50KiBwQSA9ICZpQTsNCg0KKnBBID0gMTI7DQoNCnN0ZDo6Y291dCA8
+PCAqcEEgPDwgc3RkOjplbmRsOw0KDQoNCjEyDQoNCg0KQWRkIHR3byBudW1iZXJzDQoNCg0KDQpX
+cml0ZSBDKysgcHJvZ3JhbSB0byBhZGQgdHdvIG51bWJlcnMgdXNpbmcgcG9pbnRlcnMNCg0KDQoj
+aW5jbHVkZSA8aW9zdHJlYW0+IHVzaW5nIG5hbWVzcGFjZSBzdGQ7IGludCBtYWluKCkgeyBpbnQg
+eD01LGs9ODsgaW50KiBwMT0gIA0KJng7IGludCogcDIgPSZrOyBpbnQgc3VtPSpwMSArICpwMjsg
+Y291dDw8c3VtPDxlbmRsOyByZXR1cm4gMDsgfQ0KDQoNCkxvc3QgY2FyZA0KDQpGb3IgdGhlIGJv
+YXJkIGdhbWUsIGNhcmRzIHdpdGggbnVtYmVycyBmcm9tIDEgdG8gTiBhcmUgdXNlZC4gT25lIGNh
+cmQgaXMgIA0KbG9zdC4gRmluZCBpdC4NCg0KSW5wdXQNCg0KDQpJbiB0aGUgaW5wdXQgc3RyZWFt
+LCBhIHNpbmdsZSBzcGFjZS1zZXBhcmF0ZWQgbGluZSBjb250YWlucyB0aGUgbnVtYmVyIE4gIA0K
+KDHiiaRO4omkMTAwKSBhbmQgdGhlbiBO4oiSMSBudW1iZXJzIG9mIHRoZSByZW1haW5pbmcgY2Fy
+ZHMuDQoNCg0KDQpPdXRwdXQNCg0KSXQgaXMgcmVxdWlyZWQgdG8gZGlzcGxheSB0aGUgbnVtYmVy
+IG9mIHRoZSBsb3N0IGNhcmQuDQoNCg0KDQpFeGFtcGxlDQoNCklucHV0Og0KDQo1IDEgMiAzIDUN
+Cg0KT3V0cHV0Og0KDQo0DQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ug
+c3RkOyBpbnQgbWFpbigpIHsgaW50IE47ICANCmNvdXQ8PCJtdXRxYWdyZWwgTmAgIjsgY2luPj5O
+OyBpbnQgTnN1bT1OICogKE4rMSkvMjsgaW50IGFjdHVhbHN1bT0wOyBpbnQgIA0KeDsgZm9yIChp
+bnQgaT0wO2k8Ti0xO2krKyl7IGNpbj4+eDsgYWN0dWFsc3VtKz14OyB9IGludCAgDQprb3JhYz1O
+c3VtLWFjdHVhbHN1bTsgY291dDw8ImtvcmFjIHRpdnlgICI8PGtvcmFjPDwiLW4gZSI8PGVuZGw7
+IHJldHVybiAwOyB9DQoNCg0KTmVnYXRpdmUgLSB0byB0aGUgbGVmdCENCg0KDQoNCkdpdmVuIGFu
+IGFycmF5IG9mIGludGVnZXJzIHdpdGggTiBlbGVtZW50cy4gTW92ZSBhbGwgbmVnYXRpdmUgYXJy
+YXkgdmFsdWVzIOKAiyANCuKAi3RvIHRoZSBiZWdpbm5pbmcgb2YgdGhlIGFycmF5IHdpdGhvdXQg
+Y2hhbmdpbmcgdGhlaXIgcmVsYXRpdmUgcG9zaXRpb24uICANClRoYXQgaXMsIGVhY2ggbmVnYXRp
+dmUgZWxlbWVudCBtdXN0IGJlIGluIHRoZSBzYW1lIG9yZGVyIHJlbGF0aXZlIHRvIGFsbCAgDQpu
+ZWdhdGl2ZSBlbGVtZW50cywgYW5kIGVhY2ggbm9uLW5lZ2F0aXZlIGVsZW1lbnQgbXVzdCBiZSBp
+biB0aGUgc2FtZSBvcmRlciAgDQpyZWxhdGl2ZSB0byBhbGwgbm9uLW5lZ2F0aXZlIGVsZW1lbnRz
+Lg0KDQpJbnB1dA0KDQpUaGUgZmlyc3QgbGluZSBvZiB0aGUgaW5wdXQgc3RyZWFtIGNvbnRhaW5z
+IHRoZSBudW1iZXIgTiAoMeKJpE7iiaQxMDApLg0KDQoNClRoZSBzZWNvbmQgbGluZSBjb250YWlu
+cyBOIGludGVnZXJzIEFpICgx4omkaeKJpE4sIOKIkjEwMDAwIOKJpCBBaSDiiaQxMDAwMCkgLSAg
+DQplbGVtZW50cyBvZiB0aGUgc2VxdWVuY2UuDQoNCk91dHB1dA0KDQoNCk91dHB1dCB0aGUgZWxl
+bWVudHMgb2YgdGhlIHByb2Nlc3NlZCBhcnJheSBzZXBhcmF0ZWQgYnkgYSBzcGFjZS4NCg0KRXhh
+bXBsZToNCg0KSW5wdXQ6DQoNCjYNCg0KMSAtMiAzIC00IDUgLTYNCg0KT3V0cHV0Og0KDQotMiAt
+NCAtNiAxIDMgNQ0KDQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3Rk
+OyBpbnQgbWFpbigpIHsgaW50IE47ICANCmNvdXQ8PCJtdXRxYWdyZXEgemFuZ3ZhY2kgY2hhcHkg
+IjsgY2luPj5OOyBpbnQgYXJyWzEwMF07IGZvcihpbnQgIA0KaT0wO2k8TjtpKyspIGNpbj4+YXJy
+W2ldOyBmb3IoaW50IGk9MDtpPE47aSsrKXsgaWYoYXJyW2ldPDApeyBmb3IoaW50ICANCmo9MDtq
+PGk7aisrKXsvL2d0bnVtIGVucSBhcmFqaW4gZHJha2FuIGFyamVxeSBhcnItaSBkemF4IG1hc3Vt
+ICANCmlmKGFycltqXT49MCl7IC8vdGV4ZXJvdiBwb3h1bSBlbnEgaW50IHRlbXA9YXJyW2ldOyAv
+L2R6YXggZW5xIHRleGFwb3h1bSAgDQpmb3IoaW50IGs9aTtrPmo7ay0tKXsgYXJyW2tdPWFycltr
+LTFdOyBhcnJbal09dGVtcDsgYnJlYWs7IH0gfSB9IH0gfSAgDQpmb3IoaW50IGk9MDtpPE47aSsr
+KSBjb3V0PDxhcnJbaV08PCIgIjsgY291dDw8ZW5kbDsgcmV0dXJuIDA7IH0NCg0KDQpUaGUgbW9z
+dCBwb3B1bGFyDQoNCllvdSBhcmUgZ2l2ZW4gYSBzZXF1ZW5jZSBvZiBpbnRlZ2VycyB3aXRoIE4g
+ZWxlbWVudHMuIEZpbmQgdGhlIHZhbHVlIG9mIHRoZSAgDQptb3N0IGZyZXF1ZW50bHkgcmVwZWF0
+ZWQgZWxlbWVudCBpbiB0aGUgYXJyYXkuDQoNCg0KDQpJbnB1dA0KDQpUaGUgZmlyc3QgbGluZSBv
+ZiB0aGUgaW5wdXQgc3RyZWFtIGNvbnRhaW5zIHRoZSBudW1iZXIgTiAoMeKJpE7iiaQxMDApLg0K
+DQoNCg0KVGhlIHNlY29uZCBsaW5lIGNvbnRhaW5zIE4gaW50ZWdlcnMgQWkgKDHiiaRp4omkTiwg
+4oiSMTAwMDDiiaRBaeKJpDEwMDAwKSAtIGVsZW1lbnRzICANCm9mIHRoZSBzZXF1ZW5jZS4NCg0K
+DQoNCk91dHB1dA0KDQpPdXRwdXQgdGhlIGF2ZXJhZ2UgdmFsdWUgb2YgdGhlIG1vc3QgZnJlcXVl
+bnRseSByZXBlYXRlZCBlbGVtZW50IGluIHRoZSAgDQpzZXF1ZW5jZS4gSWYgdGhlcmUgYXJlIHNl
+dmVyYWwgc3VjaCBlbGVtZW50cyBpbiB0aGUgc2VxdWVuY2UsIG91dHB1dCBmcm9tICANCnRoZW0g
+dGhlIG9uZSB0aGF0IGhhcyB0aGUgc21hbGxlc3Qgb3JkaW5hbCBudW1iZXIuDQoNCg0KDQpFeGFt
+cGxlOg0KDQpJbnB1dDoNCg0KDQo2DQoNCjcgMiAzIDcgMiA3DQoNCk91dHB1dDoNCg0KDQo3DQoN
+Cg0KDQojaW5jbHVkZSA8aW9zdHJlYW0+IHVzaW5nIG5hbWVzcGFjZSBzdGQ7IGludCBtYWluKCkg
+eyBpbnQgTjsgIA0KY291dDw8Im11dHFhZ3JlcSB6YW5ndmFjaSBjaGFweSAiOyBjaW4+Pk47IGlu
+dCBhcnJbMTAwXTsgZm9yKGludCAgDQppPTA7aTxOO2krKykgY2luPj5hcnJbaV07IGludCBtYXhj
+b3VudD0wLGJlc3RpbmRleD0tMTsgZm9yKGludCAgDQppPTA7aTxOO2krKyl7IGludCBjb3VudCA9
+MDsgZm9yKGludCBqPTA7ajxOO2orKykgaWYoYXJyW2pdPT1hcnJbaV0peyAgDQpjb3VudCsrOyB9
+IGlmIChjb3VudD5tYXhjb3VudCl7IG1heGNvdW50PWNvdW50OyBiZXN0aW5kZXg9aTsgfSB9ICAN
+CmNvdXQ8PCJhbWVuYXNoeGF0IGhhbmRpcG94eSAiPDxhcnJbYmVzdGluZGV4XTw8Ii1uIGUiPDxl
+bmRsOyByZXR1cm4gMDsgfQ0KDQoNCkRvdWJsZSByZXZlcnNlDQoNCkdpdmVuIGEgc2VxdWVuY2Ug
+b2Ygbm9uLW5lZ2F0aXZlIGludGVnZXJzIDEsMiwzLC4uLixOLiBZb3UgbXVzdCBmaXJzdCAgDQpy
+ZXZlcnNlIHBhcnQgb2YgdGhpcyBzZXF1ZW5jZSBmcm9tIGVsZW1lbnQgbnVtYmVyIEEgdG8gZWxl
+bWVudCBudW1iZXIgQiwgIA0KYW5kIHRoZW4gZnJvbSBDIHRvIEQuDQoNCg0KDQpJbnB1dA0KDQpJ
+biB0aGUgaW5wdXQgc3RyZWFtLCBhIHNpbmdsZSBsaW5lIGNvbnRhaW5zIHNwYWNlLXNlcGFyYXRl
+ZCBudW1iZXJzIE4gIA0KKDHiiaRO4omkMTAwMCksIEEsIEIsIEMsIEQgKEE8QjsgQzxEOyAx4omk
+QSwgQiwgQywgROKJpE4pLg0KDQoNCg0KT3V0cHV0DQoNCkl0IGlzIHJlcXVpcmVkIHRvIG91dHB1
+dCB0aGUgcmVzdWx0aW5nIHNlcXVlbmNlLg0KDQpFeGFtcGxlOg0KDQpJbnB1dDoNCg0KDQo5IDMg
+NiA1IDgNCg0KDQpPdXRwdXQ6DQoNCjEgMiA2IDUgOCA3IDMgNCA5DQoNCg0KI2luY2x1ZGUgPGlv
+c3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyB2b2lkIHJldmVyc2VQYXJ0KGludCBhcnJbXSwg
+aW50ICANCnN0YXJ0LCBpbnQgZW5kKXsgaW50IGk9c3RhcnQtMTsgaW50IGo9ZW5kIC0gMTsgd2hp
+bGUoaTxqKXsgaW50IHRlbXA9YXJyW2ldOyAgDQphcnJbaV09YXJyW2pdOyBhcnJbal09dGVtcDsg
+aSsrOyBqLS07IH0gfSBpbnQgbWFpbigpIHsgaW50IE4sQSxCLEMsRDsgIA0KY291dDw8Im51dHFh
+Z3JlcSB6YW5ndmFjaSBjaGFweShOKSBldiBBLEIsQyxEIHR2ZXJ5ICI7IGNpbj4+TjsgaWYoTjww
+KXsgIA0KY291dDw8IjAiPDxlbmRsOyByZXR1cm4gMDsgfSBjaW4+PkE+PkI+PkM+PkQ7IGlmKEE+
+PUIgfHwgQz49RCB8fCBBPDEgfHwgQj5OICANCnx8IEM8MSB8fEQ+Til7IGNvdXQ8PCJzeGFsIHR2
+ZXIgZW4gbXV0cWFncnZlbCx1cmlzaCBwb3JkemVxICI8PGVuZGw7IHJldHVybiAgDQowOyB9IGlu
+dCBhcnJbMTAwMF07IGZvcihpbnQgaT0wO2k8TjtpKyspeyBhcnJbaV09aSsxOyB9ICANCnJldmVy
+c2VQYXJ0KGFycixBLEIpOyByZXZlcnNlUGFydChhcnIsQyxEKTsgZm9yKGludCBpPTA7aTxOO2kr
+Kyl7ICANCmNvdXQ8PGFycltpXTw8IiAiOyB9IGNvdXQ8PGVuZGw7IHJldHVybiAwOyB9DQoNCg0K
+U3VtIG9mIEFycmF5DQoNCg0KDQpXcml0ZSBhIHByb2dyYW0gdGhhdCBhc2tzIE4gZm9yIHRoZSBu
+dW1iZXIgb2YgZWxlbWVudHMgb2YgYW4gYXJyYXkuIFRoZW4gIA0KcHJpbnQgc3VtIGFsbCBBcnJh
+eSBFbGVtZW50cyB1c2luZyBQb2ludGVycy4NCg0KRXhhbXBsZToNCklucHV0Og0KNw0KMSAyIDMg
+NCA1IDYgNw0KT3V0cHV0Og0KMjgNCg0KDQojaW5jbHVkZSA8aW9zdHJlYW0+IHVzaW5nIG5hbWVz
+cGFjZSBzdGQ7IGludCBtYWluKCl7IGludCBOOyAgDQpjb3V0PDwiTXV0cWFncmVxIHRhcnJlcmkg
+cWFuYWt5IjsgY2luPj5OOyBpZihOPD0wKXsgY291dDw8IjAiPDxlbmRsOyByZXR1cm4gIA0KMDsg
+fSBpbnQqIGFycj1uZXcgaW50W05dOyBjb3V0PDwibXV0cWFncmVxIE4gdGFycmVyeSAiOyBmb3Io
+aW50ICANCmk9MDtpPE47aSsrKXsgY2luPj4gKihhcnIraSk7IH0gaW50IHN1bT0wOyBmb3IoaW50
+IGk9MDtpPE47aSsrKXsgIA0Kc3VtKz0qKGFycitpKTsgfSBjb3V0PDwiZ3VtYXJ5IGtsaW5pIGAg
+Ijw8c3VtPDxlbmRsOyByZXR1cm4gMDsgfQ0KDQoNCkNvbmNhdGVuYXRlIHR3byB3b3Jkcw0KDQoN
+Cg0KV3JpdGUgYSBwcm9ncmFtIHRvIGNvbmNhdGVuYXRlIHR3byB3b3JkcyB3aXRoIGEgbWF4IHNp
+emUgb2YgMTAwIHVzaW5nICANCnBvaW50ZXJzDQoNCkV4YW1wbGU6DQpJbnB1dDoNCkJqYXJuZQ0K
+U3Ryb3VzdHJ1cA0KT3V0cHV0Og0KQmphcm5lU3Ryb3VzdHJ1cA0KDQoNCiNpbmNsdWRlIDxpb3N0
+cmVhbT4gdXNpbmcgbmFtZXNwYWNlIHN0ZDsgaW50IG1haW4oKXsgc3RyaW5nIHN0cjEsc3RyMjsg
+IA0KY2luPj5zdHIxPj5zdHIyOyBzdHJpbmcqIHB0cjE9JnN0cjE7IHN0cmluZyogcHRyMj0mc3Ry
+Mjsgc3RyaW5nIHJlc3VsdCAgDQo9KnB0cjEgKyAqcHRyMjsgY291dDw8cmVzdWx0PDxlbmRsOyBy
+ZXR1cm4gMDsgfQ0KDQoNCkFycmF5IGluIHJldmVyc2Ugb3JkZXINCg0KDQoNCldyaXRlIGEgcHJv
+Z3JhbSB0aGF0IGFza3MgTiBmb3IgdGhlIG51bWJlciBvZiBlbGVtZW50cyBvZiBhbiBhcnJheSBh
+bmQgYXNrcyAgDQp0aGUgdmFsdWVzIG9mIHRoZSBhcnJheSBlbGVtZW50cy4gVGhlbiBwcmludCB0
+aGUgZWxlbWVudHMgb2YgdGhlIGFycmF5IGluICANCnJldmVyc2Ugb3JkZXIgdXNpbmcgYSBwb2lu
+dGVyLg0KDQoNCkV4YW1wbGU6DQpJbnB1dDoNCjcNCjEgMiAzIDQgNSA2IDcNCk91dHB1dDoNCjcg
+NiA1IDQgMyAyIDENCg0KDQojaW5jbHVkZSA8aW9zdHJlYW0+IHVzaW5nIG5hbWVzcGFjZSBzdGQ7
+IGludCBtYWluKCl7IGludCBOOyAgDQpjb3V0PDwibXV0cWFncmVxIHRhcnJlcmkgcWFuYWt5Ijw8
+ZW5kbDsgY2luPj5OOyBpZihOPD0wKXsgY291dDw8IjAiPDxlbmRsOyAgDQpyZXR1cm4gMDsgfSBp
+bnQqIGFyciA9IG5ldyBpbnRbTl07IGNvdXQ8PCJtdXRxYWdyZXEgIjw8Tjw8IiB0YXJyZXJpICAN
+CmFyamVxbmVyeSAiOyBmb3IoaW50IGkgPSAwIDtpIDwgTiA7IGkrKyl7IGNpbj4+KihhcnIgKyBp
+KTsgfSAgDQpjb3V0PDwiaGFrYXJha3kga2xpbmlgIjsgaW50KiBwdHIgPSBhcnIgKyBOIC0gMTsg
+Zm9yKGludCBpID0gTiAtIDEgOyBpID49ICANCjAgOyBpLS0peyBjb3V0PDwqcHRyPDwiICI7IHB0
+ci0tOyB9IGNvdXQ8PGVuZGw7IGRlbGV0ZVtdIGFycjsgYXJyID0gIA0KbnVsbHB0cjsgcmV0dXJu
+IDA7IH0NCg0KDQpXcml0ZSBhIHByb2dyYW0gdGhhdCBhc2tzIE4gZm9yIHRoZSBudW1iZXIgb2Yg
+ZWxlbWVudHMgb2YgYW4gYXJyYXkgYW5kIGFza3MgIA0KdGhlIHZhbHVlcyBvZiB0aGUgYXJyYXkg
+ZWxlbWVudHMuIFRoZSBwcm9ncmFtIHNob3VsZCBwcmludCB0aGUgc3VtIG9mIHRoZSAgDQpudW1i
+ZXJzIGJldHdlZW4gW0E6Ql0gZWxlbWVudHMgYXNrZWQgZnJvbSB0aGUgdXNlci4NCg0KRXhhbXBs
+ZToNCklucHV0Og0KOQ0KMjMgNDUgMTIgMTIgMjMgMTMgMjUgMzQgOTgNCjQgNw0KDQpPdXRwdXQ6
+DQoyMyArIDEzICsgMjUgKyAzNCA9IDk1DQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBu
+YW1lc3BhY2Ugc3RkOyBpbnQgbWFpbigpIHsgaW50IE4sQSxCOyAgDQpjb3V0PDwibXV0cWFncmVx
+IHphbmd2YWNpIGNoYXB5ICI7IGNpbj4+TjsgaWYoTjw9MCl7IGNvdXQ8PCJheWwgdGl2ICANCm11
+dHFhZ3JlcSI8PGVuZGw7IHJldHVybiAwOyB9IGludCogYXJyPW5ldyBpbnRbTl07IGNvdXQ8PCJ0
+dmVxICI8PE48PCIgaGF0ICANCmFyamVxICI7IGZvcihpbnQgaT0wO2k8TjtpKyspeyBjaW4+PmFy
+cltpXTsgfSBjb3V0PDwibXV0cWFncmVxIEFuIGV2IEJuICI7ICANCmNpbj4+QT4+QjsgaWYoQT5C
+IHx8IEE8MCB8fCBCPj1OKXsgY291dDw8ImF5bCB0aXYgbXV0cWFncmVxICI8PGVuZGw7ICANCmRl
+bGV0ZVtdIGFycjsgYXJyPW51bGxwdHI7IHJldHVybiAwOyB9IGludCBzdW09MDsgZm9yKGludCBp
+PUE7aTw9QjtpKyspeyAgDQpzdW0rPWFycltpXTsgfSBjb3V0PDwiW0E6Ql0gbWlqYWtheXFpIHR2
+ZXJpIGd1bWFyeSBoYXZhc2FyICANCmtsaW5pICI8PHN1bTw8ZW5kbDsgZGVsZXRlW10gYXJyOyBh
+cnI9bnVsbHB0cjsgcmV0dXJuIDA7IH0NCg0KDQrVj9aA1b7VodWuINWnIE4g1aHVtNWi1bjVstW7
+INWp1b7VpdaA1avWgSDVotWh1bLVr9Wh1oHVodWuINWm1aHVttWj1b7VodWu1okg1LPWgNWl1awg
+1a7WgNWh1aPVq9aALCDVuNaA1agg1a/VsNWh1bfVvtWrINWh1bXVtiAgDQrVv9Wh1oDWgNWl1oDV
+qyDVo9W41oLVtNWh1oDVqCwg1bjWgNW41bbWgSDVq9W21aTVpdaE1b3VttWl1oDVqCAz1asg1a/V
+odW0IDXVqyDVotWh1arVodW21aHWgNWh1oAg1aXVttaJDQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFt
+PiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgbWFpbigpIHsgaW50IE47ICANCmNvdXQ8PCJtdXRx
+YWdyZXEgemFuZ3ZhY2kgY2hhcHkgIjsgY2luPj5OOyBpZihOPD0wKXsgY291dDw8ImF5bCB0aXYg
+IA0KbXV0cWFncmVxIjw8ZW5kbDsgcmV0dXJuIDA7IH0gaW50KiBhcnI9bmV3IGludFtOXTsgZm9y
+KGludCBpPTA7aTxOO2krKyl7ICANCmNpbj4+YXJyW2ldOyB9IGludCBzdW0zPTAsc3VtNT0wLHN1
+bUJvdGg9MDsgZm9yKGludCBpPTA7aTxOO2krKyl7IGlmKGklMz09MCAgDQomJiBpJTU9PTApeyBz
+dW1Cb3RoKz1hcnJbaV07IH1lbHNlIGlmKGklMz09MCl7IHN1bTMrPWFycltpXTsgfWVsc2UgIA0K
+aWYoaSU1PT0wKXsgc3VtNSs9YXJyW2ldOyB9IH0gaW50IHRvdGFsPXN1bUJvdGgrc3VtMytzdW01
+OyAgDQpjb3V0PDwicGF0YXN4YW55ICI8PHRvdGFsOyBkZWxldGVbXSBhcnI7IGFycj1udWxscHRy
+OyByZXR1cm4gMDsgfQ0KDQoNCtWP1oDVvtWh1a4g1acgTnhNINW51aHWg9Wh1bbVqyDVodW01aLV
+uNWy1bsg1anVvtWl1oDVq9aBINWi1aHVstWv1aHWgdWh1a4g1bTVodW/1oDVq9aB1okg1LPWgNWl
+1awg1a7WgNWh1aPVq9aALCDVuNaA1agg1a/VsNWh1bfVvtWrICANCtW01aHVv9aA1avWgdW41oLV
+tCDVptW41oLVtdWjINW/1aHWgNaA1aXWgNWrINaE1aHVttWh1a/VqNaJDQoNCg0KI2luY2x1ZGUg
+PGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQgenV5Z0hhc2h2b3goaW50ICANCm1h
+dHJpeFtdWzEwMF0saW50IE4saW50IE0peyBpbnQgcWFuYWs9MDsgZm9yKGludCBpPTA7aTxOO2kr
+Kyl7IGZvcihpbnQgIA0Kaj0wO2o8TTtqKyspeyBpZihtYXRyaXhbaV1bal0lMj09MCl7IHFhbmFr
+Kys7IH0gfSB9IHJldHVybiBxYW5hazsgfSBpbnQgIA0KbWFpbigpIHsgaW50IE4sTTsgY291dDw8
+Im11dHFhZ3JlcSBtYXRyaXgtaSB0b3hlcmkgZXYgc3l1bmVyaSBxYW5ha3kgIjsgIA0KY2luPj5O
+Pj5NOyBpbnQgbWF0cml4WzEwMF1bMTAwXTsgaWYoTjw9MCB8fCBNPD0wKXsgY291dDw8InN4YWwi
+PDxlbmRsOyAgDQpyZXR1cm4gMDsgfSBmb3IoaW50IGk9MDtpPE47aSsrKXsgZm9yKGludCBqPTA7
+ajxNO2orKyl7IGNvdXQ8PCJtdXRxYWdyZXEgIA0KYXJqZXFuZXJ5ICI7IGNpbj4+bWF0cml4W2ld
+W2pdOyB9IH0gZm9yKGludCBpPTA7aTxOO2krKyl7IGZvcihpbnQgIA0Kaj0wO2o8TTtqKyspeyBj
+b3V0PDxtYXRyaXhbaV1bal07IH0gY291dDw8ZW5kbDsgfSBpbnQgcGF0YXN4YW4gIA0KPXp1eWdI
+YXNodm94KG1hdHJpeCxOLE0pOyBjb3V0PDwienV5Z2VyaSBxYW5ha3kga2xpbmkgIjw8cGF0YXN4
+YW47IHJldHVybiAgDQowOyB9DQoNCg0K1Y/WgNW+1aHVriDVpyBOeE0g1bnVodaD1aHVttWrINWh
+1bTVotW41bLVuyDVqdW+1aXWgNWr1oEg1aLVodWy1a/VodaB1aHVriDVtNWh1b/WgNWr1oHWiSDU
+s9aA1aXVrCDVrtaA1aHVo9Wr1oAsINW41oDVqCAgDQrVtdW41oLWgNWh1oTVodW21bnVtdW41oLW
+gCDVv9W41bLVqyDVo9Ws1a3VodW+1bjWgCDVodW21a/VtdW41oLVttWh1aPVrtWrINW/1aHWgNaA
+1asg1aHWgNWq1aXWhNWoINWv1oPVuNWt1aHWgNWr1bbVqyDVodW11aQg1b/VuNWy1asgIA0K1b/V
+odaA1oDVpdaA1asg1aPVuNaC1bTVodaA1bjVvtaJDQrVhNWh1b/WgNWr1oHVqyDVo9Ws1a3VodW+
+1bjWgCDVodW21a/VtdW41oLVttWh1aPVrtWrINW01aHVvdWr1bYg1b/VpdWy1aXVr9W41oLVqdW1
+1bjWgtW2INWj1b/VpdaEINWr1bbWhNW21aXWgNWk1okNCg0KDQojaW5jbHVkZSA8aW9zdHJlYW0+
+IHVzaW5nIG5hbWVzcGFjZSBzdGQ7IGludCByb3dzdW0oaW50IG1hdHJpeFtdWzEwMF0sIGludCAg
+DQpyb3dpbmRleCwgaW50IEspIHsgaW50IHN1bSA9IDA7IGZvciAoaW50IGogPSAwOyBqIDwgSzsg
+aisrKSB7IHN1bSArPSAgDQptYXRyaXhbcm93aW5kZXhdW2pdOyB9IHJldHVybiBzdW07IH0gaW50
+IG1haW4oKSB7IGludCBOLE07IGNvdXQ8PCJtdXRxYWdyZXEgIA0KTnkgZXYgTXkgIjsgY2luPj5O
+Pj5NOyBpZihOPD0wIHx8IE08PTApeyBjb3V0PDwic3hhbCI8PGVuZGw7IHJldHVybiAwOyB9ICAN
+CmludCBtYXRyaXhbMTAwXVsxMDBdOyBjb3V0PDwibXV0cWFncmVxIGFyamVxbmVyeSAiOyBmb3Io
+aW50IGk9MDtpPE47aSsrKXsgIA0KZm9yKGludCBqPTA7ajxNO2orKyl7IGNpbj4+bWF0cml4W2ld
+W2pdOyB9IH0gaW50IG1pbk5NID0gKCBOIDwgTSApID8gTiA6IE07ICANCmZvcihpbnQgaT0wO2k8
+bWluTk07aSsrKXsgbWF0cml4W2ldW2ldPXJvd3N1bShtYXRyaXgsaSxNKTsgfSAgDQpjb3V0PDwi
+cG9wb3h2YWMgbWF0cml4IjsgZm9yKGludCBpPTA7aTxOO2krKyl7IGZvcihpbnQgaj0wO2o8TTtq
+KyspeyAgDQpjb3V0PDxtYXRyaXhbaV1bal08PCIgIjsgfSBjb3V0PDxlbmRsOyB9IHJldHVybiAw
+OyB9DQoNCg0K1Y/WgNW+1aHVriDVpyBOeE0g1bnVodaD1aHVttWrINWh1bTVotW41bLVuyDVqdW+
+1aXWgNWr1oEg1aLVodWy1a/VodaB1aHVriDVtNWh1b/WgNWr1oHWiSDUs9aA1aXVrCDVrtaA1aHV
+o9Wr1oAsINW41oDVqCDVr9Wj1b/VttWrDQrVtNWh1b/WgNWr1oHVqyDVo9Ws1a3VodW+1bjWgCDV
+odW21a/VtdW41oLVttWh1aPVrtWr1oEg1b7VpdaA1ocg1aXVstWh1a4g1b/VodaA1oDVpdaA1avW
+gSDVodW01aXVttWh1bTVpdWu1ajWiQ0KDQoNCiNpbmNsdWRlIDxpb3N0cmVhbT4gdXNpbmcgbmFt
+ZXNwYWNlIHN0ZDsgaW50IG1haW4oKSB7IGludCBOLE07ICANCmNvdXQ8PCJtdXRxYWdyZXEgbWF0
+cml4aSBjaGFwZXJ5ICI7IGNpbj4+Tj4+TTsgaWYoTjw9MCB8fCBNPD0wKXsgIA0KY291dDw8IlN4
+YWwiPDxlbmRsOyByZXR1cm4gMDsgfSBpbnQgbWF0cml4WzEwMF1bMTAwXTsgY291dDw8Im11dHFh
+Z3JlcSAgDQphcmplcW5lcnkgIjsgZm9yKGludCBpPTA7aTxOO2krKyl7IGZvcihpbnQgaj0wO2o8
+TTtqKyspeyBjaW4+Pm1hdHJpeFtpXVtqXTsgIA0KfSB9IGJvb2wgZm91bmQ9ZmFsc2U7IGludCBt
+YXhBYm92ZT0wOyBmb3IoaW50IGk9MDtpPE47aSsrKXsgZm9yKGludCAgDQpqPWkrMTtqPE07aisr
+KXsgaWYoIWZvdW5kKXsgbWF4QWJvdmU9bWF0cml4W2ldW2pdOyBmb3VuZD10cnVlOyB9ZWxzZSAg
+DQppZihtYXRyaXhbaV1bal0+bWF4QWJvdmUpeyBtYXhBYm92ZT1tYXRyaXhbaV1bal07IH0gfSB9
+IGlmKGZvdW5kKXsgIA0KY291dDw8ImFtZW5hbWVjIGFyamVxeSBnbHhhdm9yIGFua3l1bmFnY2lj
+IHZlcmV2ICI8PG1heEFib3ZlPDwiLW4gZSI8PGVuZGw7ICANCn1lbHNlIHsgY291dDw8ImdseGF2
+b3IgYW5reXVuYWdjaWMgdmVyZXYgdm9jaCBtaSB0YXJyIGNoa2EgIjw8ZW5kbDsgfSAgDQpyZXR1
+cm4gMDsgfQ0KDQoNCtWP1oDVvtWh1a4g1acgcyDVv9W41bLVqCDWhyBrINWp1avVvtWoICgxIDw9
+IGsgPD0gMjYp1okNCtSz1oDVpdWsINWu1oDVodWj1avWgCwg1bjWgNWoINWv1a/VuNWk1aHVvtW4
+1oDVqyBzINW/1bjVstWoINS/1aXVvdWh1oDVtdWh1bYgayDVodW7INWv1bjVpNWh1b7VuNaA1bTV
+odW01aLWiQ0KDQoNCiNpbmNsdWRlIDxpb3N0cmVhbT4gdXNpbmcgbmFtZXNwYWNlIHN0ZDsgaW50
+IG1haW4oKSB7IHN0cmluZyBzOyBpbnQgSzsgIA0KY291dDw8Im11dHFhZ3JlcSBzIHRveHkgIjsg
+Z2V0bGluZShjaW4scyk7IGNvdXQ8PCJtdXRxYWdyZXEgS24gIjsgY2luPj5LOyAgDQppZihLPDEg
+fHwgSz4yNil7IGNvdXQ8PCJzeGFsIjw8ZW5kbDsgcmV0dXJuIDA7IH0gY291dDw8Imtlc2FyeWFu
+IGFqICANCmtvZGF2b3J2YWMgdGV4dHk6ICI7IGZvcihpbnQgaT0wO2k8cy5sZW5ndGgoKTtpKysp
+eyBjaGFyIGM9c1tpXTsgIA0KaWYoaXN1cHBlcihjKSl7IC8vZXRlIG1lY2F0YXIgZWM9Y2hhcigo
+Yy0nQScrSyklMjYrJ0EnKTsgfWVsc2UgIA0KaWYoaXNsb3dlcihjKSl7IC8vZXRlIHBvcXJhdGFy
+IGUgYz1jaGFyKChjLSdhJytLKSUyNisnYScpOyB9IGNvdXQ8PGM7IH0gIA0KY291dDw8ZW5kbDsg
+cmV0dXJuIDA7IH0NCg0KDQrVj9aA1b7VodWuINWnIE54TSDVudWh1oPVodW21asg1avWgNWh1a/V
+odW2INWp1b7VpdaA1avWgSDVotWh1bLVr9Wh1oHVodWuINW01aHVv9aA1avWgdaJINSz1oDVpdWs
+INWu1oDVodWj1avWgCwg1bjWgNWoINWv1bDVodW31b7VqyAgDQrVo9Ws1a3VodW+1bjWgCDVodW2
+1a/VtdW41oLVttWh1aPVrtWrINW+1oDVoSDVr9Wh1bQg1bbWgNWh1bbVq9aBINW21aXWgNaE1ocg
+1aPVv9W21b7VuNWyINWh1bXVtiDVv9Wh1oDWgNWl1oDVqyDWhNWh1bbVodWv1agsINW41oDVuNW2
+1oQgIA0K1aPVv9W21b7VuNaC1bQg1aXVtiBbMTIuMzsgMzQuMSkg1bTVq9W71aHVr9Wh1bXWhNW4
+1oLVtNaJDQoNCg0KI2luY2x1ZGUgPGlvc3RyZWFtPiB1c2luZyBuYW1lc3BhY2Ugc3RkOyBpbnQg
+bWFpbigpIHsgaW50IE4sTTsgIA0KY291dDw8Ik11dHFhZ3JlcSBjaGFwZXJ5ICI7IGNpbj4+Tj4+
+TTsgaWYoTjw9MCB8fE08PTApeyBjb3V0PDwic3hhbCAgDQptYXRyaXggIjw8ZW5kbDsgcmV0dXJu
+IDA7IH0gZG91YmxlIG1hdHJpeFsxMDBdWzEwMF07IGNvdXQ8PCJtdXRxYWdyZSAgDQphcmplcW5l
+cnkgIjsgZm9yKGludCBpPTA7aTxOO2krKyl7IGZvcihpbnQgaj0wO2o8TTtqKyspeyBjaW4+Pm1h
+dHJpeFtpXVtqXTsgIA0KfSB9IGRvdWJsZSBsb3dlcj0xMi4zOyBkb3VibGUgaGlnaGVyPTM0LjE7
+IGludCBjb3VudD0wOyBpbnQgbGltaXQgPShOPE0pID8gIA0KTjpNOyBmb3IoaW50IGk9MDtpPE47
+aSsrKXsgZm9yKGludCBqPTA7ajxNICYmIGo8PWk7aisrKXsgZG91YmxlICANCnZhbHVlcz1tYXRy
+aXhbaV1bal07IGlmKHZhbHVlcz49bG93ZXIgJiYgdmFsdWVzPDM0LjEgKXsgY291bnQrKzsgfSB9
+IH0gIA0KY291dDw8ImdseGF2b3IgYW5reXVuYWtjaSB2cmEga2FtIG5yYW5pYyBuZXJnZXYgWyI8
+PGxvd2VyPDwiOiI8PGhpZ2hlcjw8IikgIA0KbWlqYWtheXF1bSBrYSI8PGNvdW50PDwiIGhhdCB0
+aXYiPDxlbmRsOyByZXR1cm4gMDsgfQ0KDQoNCtSz1oDVq9aAINWu1oDVodWj1avWgCwg1bjWgNWo
+1Z0NCg0K1Y3Vv9Wh1bbVuNaC1bQg1acgbiDVodW01aLVuNWy1bsg1anVq9W+DQrUtNWr1bbVodW0
+1avVryDVr9Wl1oDVutW41b4g1b3Vv9Wl1bLVrtW41oLVtCDVpyDVptWh1bbVo9W+1aHVriBuZXcg
+1oXVutWl1oDVodW/1bjWgNW41b4NCtS81oDVodaB1bbVuNaC1bQg1acg1aHVtdW2INaF1aPVv9Wh
+1b/Vq9aA1bjVuyDVtNW41oLVv9aE1aHVo9aA1aHVriDVodaA1arVpdaE1bbVpdaA1bjVvg0K1YDV
+odW31b7VuNaC1bQg1ocg1b/VutW41oLVtCDVpyDVtNWr1bvVq9W2INWp1b7VodWi1aHVttWh1a/V
+odW21aggOw0K1LHVptWh1b/VuNaC1bQg1acg1bDVq9W31bjVstW41oLVqdW11bjWgtW21aggZGVs
+ZXRlW10t1bjVvg0KDQoNCiNpbmNsdWRlIDxpb3N0cmVhbT4gdXNpbmcgbmFtZXNwYWNlIHN0ZDsg
+aW50IG1haW4oKSB7IGludCBuOyAgDQpjb3V0PDwibXV0cWFncmVxIG55ICI7IGNpbj4+bjsgaW50
+KiBhcnI9bmV3IGludFtuXTsgaW50IHN1bT0wOyAgDQpjb3V0PDwibXV0cWFncmVxIGFyamVxbmVy
+eSAiOyBmb3IoaW50IGk9MDtpPG47aSsrKXsgY2luPj5hcnJbaV07ICANCnN1bSs9YXJyW2ldOyB9
+IGludCBtaWppbj1zdW0vbjsgY291dDw8Im1pamluIHR2YWJhbmFrYW55IGtsaW5pICANCmAgIjw8
+bWlqaW48PGVuZGw7IGRlbGV0ZVtdIGFycjsgYXJyPW51bGxwdHI7IHJldHVybiAwOyB9DQoNCg0K
+1LLVodaB1aHVv9aA1avWgCDVv9Wh1oDVotWl1oDVuNaC1anVtdW41oLVttWo1Z0NCg0KaW50KiBw
+dHI7DQpjb25zdCBpbnQqIHB0cjsNCmludCogY29uc3QgcHRyOw0KY29uc3QgaW50KiBjb25zdCBw
+dHI7DQoNCg0KaW50KiBwdHLigJMg1ocg1bDVodW91oHVpdW2INaHINWh1oDVqtWl1oTVqCDVr9Wh
+1oDVuNWyINWl1bYg1oPVuNaD1bjVrdW+1aXVrNaJIGNvbnN0IGludCogcHRy4oCTINWv1aHWgNW4
+1bIg1acgIA0K1oPVuNWt1aXVrCDVsNWh1b3WgdWl1bYs1aLVodW11oEg1bnVqyDVr9Wh1oDVuNWy
+INaD1bjVrdWl1awg1aHWgNWq1aXWhNWo1okgaW50KiBjb25zdCBwdHItINWv1aHWgNW41bIg1acg
+1oPVuNWt1aXVrCAgDQrVodaA1arVpdaE1agg1aLVodW11oEg1bnVqyDVr9Wh1oDVuNWyINaD1bjV
+rdWl1awg1bDVodW91oHVpdW21okgY29uc3QgaW50KiBjb25zdCBwdHLigJPVuNW5INWh1oDVqtWl
+1oTVtiDVpyDVr9Wh1oDVuNWyICANCtaD1bjVrdWl1awg1bjVuSDVp9WsINWw1aHVvdaB1aXWiQ0K
+DQoNCtS71Z7VttW5INWnINW/1aXVstWrINW41oLVttWl1bbVuNaC1bQsINWl1oDVoiDWhdWj1b/V
+odWj1bjWgNWu1bjWgtW0INWl1bbWhCBuZXcg1ocgZGVsZXRlINaF1brVpdaA1aHVv9W41oDVttWl
+1oDVqNaJDQrVhtW31avWgNWdDQoNCtWI1oDVv9Wl1bIg1acg1brVodWw1b7VuNaC1bQg1bDVq9W3
+1bjVstW41oLVqdW11bjWgtW21aggKHN0YWNrIHZzIGhlYXApDQrUu9W21bnVuNaCINWnINWv1aHW
+gNaH1bjWgCDVodWm1aHVv9Wl1awg1bDVq9W31bjVstW41oLVqdW11bjWgtW21agNCg0KDQppbnQq
+IGFyciA9IG5ldyBpbnRbbl07IG5ldy3VuNW+INWw1aHVtNWh1a/VodaA1aPVqCDVsNWr1bfVuNWy
+1bjWgtWp1bXVuNaC1bYg1acg1bDVodW/1a/VodaB1bbVuNaC1bQgSGVhcC3VuNaC1bQgIA0KbiDV
+qdW+1asg1bDVodW01aHWgNaJINWO1aXWgNWh1aTVodaA1bHVttW41oLVtCDVpyDVodW11aQg1bbV
+uNaAINWw1avVt9W41bLVuNaC1anVtdWh1bYg1bDVodW91oHVpdW2LNW41oDVqCDVutWh1bDVvtW4
+1oLVtCDVpyAgDQrWgdW41oLWgdWr1bnVqyDVtNWl1bsoYXJyKTog1LHVtdW9INWw1avVt9W41bLV
+uNaC1anVtdW41oLVttWoINW+1aHVvtWl1oAg1acg1bTVttW41oLVtCDVodW11bbWhNWh1bYg1arV
+odW01aHVttWh1a8g1bTVq9W21bnWhyAgDQpkZWxldGVbXSDVodW21aXVttaE1okgRGVsZXRlW10t
+1agg1aHVptWh1b/VuNaC1bQg1acgbmV3IOKAk9W41b4g1bDVodW/1a/VodaB1b7VodWuINWw1avV
+t9W41bLVuNaC1anVtdW41oLVttWo1okg1LXVqdWlICANCmRlbGV0ZVtdINW51aHWgNW+1asg1b/V
+pdWy1asg1a/VuNaC1bbVpdW21aEg1bDVq9W31bjVstW41oLVqdW11aHVtiDVr9W41oDVuNaC1b3V
+vyAobWVtb3J5IGxlYWspOiBkZWxldGVbXSAgDQrVodW21aXVrNWoINWv1aHWgNaH1bjWgCDVpyDV
+ttaA1aEg1bDVodW01aHWgCDVuNaA1brVpdW91abVqyDVudWh1bzVodW71aHVttWhINWw1avVt9W4
+1bLVuNaC1anVtdWh1bYg1a/VuNaA1bjWgtW91b8gLNWh1bXVvdWr1bbWhNW2INWl1anVpSAgDQrV
+ttW41oLVtdW21avVvdWvINWh1bXVtiDVudaF1aPVv9Wh1aPVuNaA1a7VvtWrINW01avWh9W21bjW
+gtW2INWnINWv1brVodWw1b7Vq9aJINS+1oDVodWj1avWgNWoINWv1aTVodW21aTVodWy1avWiSDU
+tdW+INWw1bbVodaA1aHVvtW41oAg1acgIA0K1aHVvNWh1bvVodW21aEg1aHVttW+1b/VodW21aPV
+uNaC1anVtdWh1bYg1a3VttWk1avWgNW21aXWgNaJINS71b3VryDWhdaA1avVttWh1a8gaW50IG49
+NTsg1oPVuNaD1bjVrdWh1a/VodW21agg1brVodWw1b7VuNaC1bQg1acgIA0Kc3RhY2st1bjWgtW0
+1okNCg0KDQpDcmVhdGUgeW91ciBvd24gR29vZ2xlIEZvcm0NCg0KRG9lcyB0aGlzIGZvcm0gbG9v
+ayBzdXNwaWNpb3VzPyBSZXBvcnQNCg0KDQo=
+--0000000000003a82fc0639052f8f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"MnguCliHKSb7_ApYsN-7TQ">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"MnguCliHKSb7_ApYsN-7TQ">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(103,58,183);" width=3D"100%" role=3D"presentation"><tbody><tr heigh=
+t=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_white_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(237,231,246);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out =
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSe8LZDvvQRgntDTrfB9eQVt=
+8d_ht3D4M17Epp_1x7i42Grplg/viewform?usp=3Dmail_form_link" target=3D"_blank"=
+ style=3D"white-space: pre-wrap;">C++ Fundamentals 2 (Memory, arrays, matri=
+xes, simple functions)<span></span><span></span></a></h1>Here's what was re=
+ceived.</div><div style=3D"border-bottom: 1px solid #dadce0; border-left: 1=
+px solid #dadce0; border-right: 1px solid #dadce0; border-top: 8px solid rg=
+b(103,58,183); padding: 20px;background-color: #fff; border-radius: 8px; ma=
+rgin-bottom: 12px;"><h1 dir=3D"ltr" style=3D"font-family: Roboto,Helvetica,=
+Arial,sans-serif;font-size: 32px; font-weight: 400; line-height: 42px;white=
+-space: pre-wrap;margin: 0 0 12px;">C++ Fundamentals 2 (Memory, arrays, mat=
+rixes, simple functions)<span></span><span></span></h1><div style=3D"white-=
+space: pre-wrap;margin-bottom: 12px;"></div><div dir=3D"ltr">Your email (<b=
+>muradyanmanvel65@gmail.com</b>) was recorded when you submitted this form.=
+</div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;bac=
+kground-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom:=
+ 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #2=
+02124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-=
+weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;"><di=
+v>What will print the following program?<br><br></div>int iA =3D 6;<div>int=
+* pA =3D &amp;iA;</div><div>*pA =3D 12;</div><div>std::cout &lt;&lt; *pA &l=
+t;&lt; std::endl;</div></h2></div><div style=3D"padding: 0 12px;"><div styl=
+e=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;di=
+splay: inline-block; max-width: 100%; min-width: 50%;">12</div></div></div>=
+</div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgroun=
+d-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;=
+"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;=
+font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight=
+: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;"><div><b>A=
+dd two numbers</b></div><div><b><br></b></div>Write C++ program to add two =
+numbers using pointers<br></h2></div><div style=3D"padding: 0 12px;"><div d=
+ir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0=
+,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;=
+iostream&gt;
+using namespace std;
+
+int main() {
+    int x=3D5,k=3D8;
+    int* p1=3D &amp;x;
+    int* p2 =3D&amp;k;
+    int sum=3D*p1 + *p2;
+    cout&lt;&lt;sum&lt;&lt;endl;
+    return 0;
+}
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">
+=09
+=09
+
+<p><b>Lost card</b></p>
+<p>For the board game,
+cards with numbers from 1 to N are used. One card is lost. Find it.</p>
+<p><span><b>Input</b></span><br></p>
+<p>In the input stream,
+a single space-separated line contains the number N (1=E2=89=A4N=E2=89=A410=
+0) and
+then N=E2=88=921 numbers of the remaining cards.</p>
+<p><br>
+
+</p>
+<p><b>Output</b></p>
+<p>It is required to
+display the number of the lost card.</p><p><br></p><p><b>Example</b></p><p>=
+<b>Input:</b></p><p>5 1 2 3 5</p><p><b>Output:</b></p><p>4</p></h2></div><d=
+iv style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-w=
+rap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-heig=
+ht: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int N;
+    cout&lt;&lt;&quot;mutqagrel N` &quot;;
+    cin&gt;&gt;N;
+   =20
+    int Nsum=3DN * (N+1)/2;
+    int actualsum=3D0;
+    int x;
+   =20
+    for (int i=3D0;i&lt;N-1;i++){
+        cin&gt;&gt;x;
+        actualsum+=3Dx;
+    }
+    int korac=3DNsum-actualsum;
+   =20
+    cout&lt;&lt;&quot;korac tivy` &quot;&lt;&lt;korac&lt;&lt;&quot;-n e&quo=
+t;&lt;&lt;endl;
+
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><b>Negative - to the left!</b><div><b><br></b></div><div>
+=09
+=09
+
+<p>Given an array of integers with N elements. Move all negative array
+values =E2=80=8B=E2=80=8Bto the beginning of the array without changing the=
+ir
+relative position. That is, each negative element must be in the same
+order relative to all negative elements, and each non-negative
+element must be in the same order relative to all non-negative
+elements.</p><p><b>Input</b></p><p>
+The first line of the input stream contains the number N (1=E2=89=A4N=E2=89=
+=A4100).</p><p>
+=09
+=09
+
+
+
+</p><p>The second line
+contains N integers Ai (1=E2=89=A4i=E2=89=A4N, =E2=88=9210000 =E2=89=A4 Ai =
+=E2=89=A410000) - elements of
+the sequence.</p><p><b>Output</b></p><p>
+=09
+=09
+
+</p><p>Output the elements of the processed array separated by a space.</p>=
+<p><b>
+Example:</b></p><p><b>Input:</b></p><p>6</p><p>
+=09
+=09
+
+
+
+
+<a></a>1 -2 3 -4 5 -6</p><p><b>Output:</b></p><p>
+
+-2 -4 -6 1 3 5</p><p><br></p></div></h2></div><div style=3D"padding: 0 12px=
+;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dott=
+ed rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#inc=
+lude &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int N;
+    cout&lt;&lt;&quot;mutqagreq zangvaci chapy &quot;;
+    cin&gt;&gt;N;
+   =20
+    int arr[100];
+    for(int i=3D0;i&lt;N;i++)
+        cin&gt;&gt;arr[i];
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        if(arr[i]&lt;0){
+            for(int j=3D0;j&lt;i;j++){//gtnum enq arajin drakan arjeqy arr-=
+i dzax masum
+                if(arr[j]&gt;=3D0){
+                 //texerov poxum enq
+                    int temp=3Darr[i];
+                    //dzax enq texapoxum
+                    for(int k=3Di;k&gt;j;k--){
+                        arr[k]=3Darr[k-1];
+                      =20
+                        arr[j]=3Dtemp;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+   =20
+    for(int i=3D0;i&lt;N;i++)
+    cout&lt;&lt;arr[i]&lt;&lt;&quot; &quot;;
+    cout&lt;&lt;endl;
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">
+=09
+=09
+
+<p>=C2=A0<b>The most popular</b></p>
+<p>You are given a
+sequence of integers with N elements. Find the value of the most
+frequently repeated element in the array.</p>
+<p><br>
+
+</p>
+<p><b>Input</b></p>
+<p>The first line of
+the input stream contains the number N (1=E2=89=A4N=E2=89=A4100).</p>
+<p><br>
+
+</p>
+<p>The second line
+contains N integers Ai (1=E2=89=A4i=E2=89=A4N, =E2=88=9210000=E2=89=A4Ai=E2=
+=89=A410000) - elements of
+the sequence.</p>
+<p><br>
+
+</p>
+<p><b>Output</b></p>
+<p>Output the average
+value of the most frequently repeated element in the sequence. If
+there are several such elements in the sequence, output from them the
+one that has the smallest ordinal number.</p>
+<p><br>
+
+</p>
+<p><b>Example:</b></p>
+<p><span><b>Input:</b></span><br></p>
+<p>6</p>
+<p><span>7 2 3 7 2 7</span></p><p><span><b>Output:</b></span><br></p>
+<p>7</p><p><br></p></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"a=
+uto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.=
+38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostrea=
+m&gt;
+using namespace std;
+
+int main()
+{
+    int N;
+    cout&lt;&lt;&quot;mutqagreq zangvaci chapy &quot;;
+    cin&gt;&gt;N;
+   =20
+    int arr[100];
+    for(int i=3D0;i&lt;N;i++)
+        cin&gt;&gt;arr[i];
+       =20
+    int maxcount=3D0,bestindex=3D-1;
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        int count =3D0;
+        for(int j=3D0;j&lt;N;j++)
+        if(arr[j]=3D=3Darr[i]){
+            count++;
+        }
+        if (count&gt;maxcount){
+            maxcount=3Dcount;
+            bestindex=3Di;
+        }
+       =20
+    }
+    cout&lt;&lt;&quot;amenashxat handipoxy &quot;&lt;&lt;arr[bestindex]&lt;=
+&lt;&quot;-n e&quot;&lt;&lt;endl;
+   =20
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">
+=09
+=09
+
+<p><b>=C2=A0Double reverse</b></p>
+<p>Given a sequence of
+non-negative integers 1,2,3,...,N. You must first reverse part of
+this sequence from element number A to element number B, and then
+from C to D.</p>
+<p><br>
+
+</p>
+<p><b>Input</b></p>
+<p>In the input stream,
+a single line contains space-separated numbers N (1=E2=89=A4N=E2=89=A41000)=
+, A,
+B, C, D (A&lt;B; C&lt;D; 1=E2=89=A4A, B, C, D=E2=89=A4N).</p>
+<p><br>
+
+</p>
+<p><b>Output</b></p>
+<p>It is required to
+output the resulting sequence.</p><p><b>Example:</b></p><p><b>Input:</b><br=
+></p><p>9 3 6 5 8<b><br></b></p><p><b>Output:</b></p><p><span style=3D"whit=
+e-space:pre">1 2 6 5 8 7 3 4 9</span><b><br></b></p></h2></div><div style=
+=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bord=
+er-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px=
+;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+void reversePart(int arr[], int start, int end){
+        int i=3Dstart-1;
+        int j=3Dend - 1;
+        while(i&lt;j){
+            int temp=3Darr[i];
+            arr[i]=3Darr[j];
+            arr[j]=3Dtemp;
+            i++;
+            j--;
+           =20
+        }
+       =20
+    }
+
+int main()
+{
+    int N,A,B,C,D;
+    cout&lt;&lt;&quot;nutqagreq zangvaci chapy(N) ev A,B,C,D tvery &quot;;
+    cin&gt;&gt;N;
+    if(N&lt;0){
+        cout&lt;&lt;&quot;0&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+   =20
+    cin&gt;&gt;A&gt;&gt;B&gt;&gt;C&gt;&gt;D;
+   =20
+    if(A&gt;=3DB || C&gt;=3DD || A&lt;1 || B&gt;N || C&lt;1 ||D&gt;N){
+        cout&lt;&lt;&quot;sxal tver en mutqagrvel,urish pordzeq &quot;&lt;&=
+lt;endl;
+        return 0;
+    }
+   =20
+    int arr[1000];
+    for(int i=3D0;i&lt;N;i++){
+        arr[i]=3Di+1;
+       =20
+    }
+   =20
+    reversePart(arr,A,B);
+    reversePart(arr,C,D);
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        cout&lt;&lt;arr[i]&lt;&lt;&quot; &quot;;
+    }
+    cout&lt;&lt;endl;
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><div><b>Sum of Array</b><br></div><div><b><br></b></div>Write a program=
+ that asks N for the number of elements of an array. Then print sum all Arr=
+ay Elements using Pointers.<br><br><b>Example</b>:<br>=C2=A0 =C2=A0=C2=A0<b=
+>Input</b>:<br>=C2=A0 =C2=A0 =C2=A0 =C2=A07<br>=C2=A0 =C2=A0 =C2=A0 =C2=A01=
+ 2 3 4 5 6 7<br>=C2=A0 =C2=A0=C2=A0<b>Output</b>:=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =C2=A028<br></h2></div><div style=3D"padd=
+ing: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-botto=
+m: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: =
+100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+   =20
+    int N;
+    cout&lt;&lt;&quot;Mutqagreq tarreri qanaky&quot;;
+    cin&gt;&gt;N;
+   =20
+    if(N&lt;=3D0){
+        cout&lt;&lt;&quot;0&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    int* arr=3Dnew int[N];
+   =20
+    cout&lt;&lt;&quot;mutqagreq N tarrery &quot;;
+    for(int i=3D0;i&lt;N;i++){
+        cin&gt;&gt; *(arr+i);
+    }
+   =20
+    int sum=3D0;
+    for(int i=3D0;i&lt;N;i++){
+       =20
+        sum+=3D*(arr+i);
+    }
+    cout&lt;&lt;&quot;gumary klini ` &quot;&lt;&lt;sum&lt;&lt;endl;
+   =20
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><div><b>Concatenate two words</b><br></div><div><b><br></b></div>Write =
+a program to concatenate two words with a max size of 100=C2=A0using pointe=
+rs<br><br><b>Example</b>:<br>=C2=A0 =C2=A0=C2=A0<b>Input</b>:<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0=C2=A0Bjarne=C2=A0<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 Stroustr=
+up<br>=C2=A0 =C2=A0=C2=A0<b>Output</b>:<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 Bjar=
+neStroustrup<br></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto=
+" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38)=
+;margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostream&g=
+t;
+using namespace std;
+
+int main(){
+   =20
+    string str1,str2;
+    cin&gt;&gt;str1&gt;&gt;str2;
+    string* ptr1=3D&amp;str1;
+    string* ptr2=3D&amp;str2;
+    string result =3D*ptr1 + *ptr2;
+    cout&lt;&lt;result&lt;&lt;endl;
+   =20
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;"><b>Array in reverse order=C2=A0</b><div><br></div><div>Write a program =
+that asks N for the number of elements of an array and asks the values of t=
+he array elements. Then print the elements of the array in reverse order us=
+ing a pointer.<br><br><br><b>Example</b>:<br>=C2=A0 =C2=A0=C2=A0<b>Input</b=
+>:<br>=C2=A0 =C2=A0 =C2=A0 =C2=A07<br>=C2=A0 =C2=A0 =C2=A0 =C2=A01 2 3 4 5 =
+6 7<br>=C2=A0 =C2=A0=C2=A0<b>Output</b>:=C2=A0 =C2=A0 =C2=A0 =C2=A0<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 7 6 5 4 3 2 1<br></div></h2></div><div style=3D"pa=
+dding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bot=
+tom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width=
+: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+   =20
+    int N;
+    cout&lt;&lt;&quot;mutqagreq tarreri qanaky&quot;&lt;&lt;endl;
+    cin&gt;&gt;N;
+   =20
+    if(N&lt;=3D0){
+        cout&lt;&lt;&quot;0&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    int* arr =3D new int[N];
+   =20
+    cout&lt;&lt;&quot;mutqagreq &quot;&lt;&lt;N&lt;&lt;&quot; tarreri arjeq=
+nery &quot;;
+    for(int i =3D 0 ;i &lt; N ; i++){
+        cin&gt;&gt;*(arr + i);
+    }
+   =20
+    cout&lt;&lt;&quot;hakaraky klini`&quot;;
+    int* ptr =3D arr + N - 1;
+    for(int i =3D N - 1 ; i &gt;=3D 0 ; i--){
+        cout&lt;&lt;*ptr&lt;&lt;&quot; &quot;;
+        ptr--;
+    }
+   =20
+    cout&lt;&lt;endl;
+    delete[] arr;
+    arr =3D nullptr;
+
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">Write a program that asks N for the number of elements of an array and =
+asks the values of the array elements. The program should print the sum of =
+the numbers between [A:B] elements asked from the user.<br><br><b>Example:<=
+br>=C2=A0 =C2=A0 Input:<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0</b>9<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A023 45 12 12 23 13 25 34 98<br>=C2=A0 =C2=A0 =C2=A0 =C2=A04=
+=C2=A0 7<br><br>=C2=A0 =C2=A0=C2=A0<b>Output</b>:<div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 23 + 13 + 25 + 34 =3D 95<br></div></h2></div><div style=3D"padding: =
+0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1p=
+x dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;=
+">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int N,A,B;
+    cout&lt;&lt;&quot;mutqagreq zangvaci chapy &quot;;
+    cin&gt;&gt;N;
+   =20
+    if(N&lt;=3D0){
+        cout&lt;&lt;&quot;ayl tiv mutqagreq&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    int* arr=3Dnew int[N];
+    cout&lt;&lt;&quot;tveq &quot;&lt;&lt;N&lt;&lt;&quot; hat arjeq &quot;;
+    for(int i=3D0;i&lt;N;i++){
+        cin&gt;&gt;arr[i];
+    }
+    cout&lt;&lt;&quot;mutqagreq A-n ev B-n &quot;;
+    cin&gt;&gt;A&gt;&gt;B;
+   =20
+    if(A&gt;B || A&lt;0 || B&gt;=3DN){
+        cout&lt;&lt;&quot;ayl tiv mutqagreq &quot;&lt;&lt;endl;
+        delete[] arr;
+        arr=3Dnullptr;
+        return 0;
+    }
+   =20
+    int sum=3D0;
+    for(int i=3DA;i&lt;=3DB;i++){
+        sum+=3Darr[i];
+    }
+    cout&lt;&lt;&quot;[A:B] mijakayqi tveri gumary havasar klini &quot;&lt;=
+&lt;sum&lt;&lt;endl;
+    delete[] arr;
+    arr=3Dnullptr;
+
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 N =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=
+=D5=BB =D5=A9=D5=BE=D5=A5=D6=80=D5=AB=D6=81 =D5=A2=D5=A1=D5=B2=D5=AF=D5=A1=
+=D6=81=D5=A1=D5=AE =D5=A6=D5=A1=D5=B6=D5=A3=D5=BE=D5=A1=D5=AE=D6=89 =D4=B3=
+=D6=80=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8=
+ =D5=AF=D5=B0=D5=A1=D5=B7=D5=BE=D5=AB =D5=A1=D5=B5=D5=B6 =D5=BF=D5=A1=D6=80=
+=D6=80=D5=A5=D6=80=D5=AB =D5=A3=D5=B8=D6=82=D5=B4=D5=A1=D6=80=D5=A8, =D5=B8=
+=D6=80=D5=B8=D5=B6=D6=81 =D5=AB=D5=B6=D5=A4=D5=A5=D6=84=D5=BD=D5=B6=D5=A5=
+=D6=80=D5=A8 3=D5=AB =D5=AF=D5=A1=D5=B4 5=D5=AB =D5=A2=D5=A1=D5=AA=D5=A1=D5=
+=B6=D5=A1=D6=80=D5=A1=D6=80 =D5=A5=D5=B6=D6=89</h2></div><div style=3D"padd=
+ing: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-botto=
+m: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: =
+100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int N;
+    cout&lt;&lt;&quot;mutqagreq zangvaci chapy &quot;;
+    cin&gt;&gt;N;
+   =20
+    if(N&lt;=3D0){
+        cout&lt;&lt;&quot;ayl tiv mutqagreq&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    int* arr=3Dnew int[N];
+    for(int i=3D0;i&lt;N;i++){
+        cin&gt;&gt;arr[i];
+    }
+   =20
+    int sum3=3D0,sum5=3D0,sumBoth=3D0;
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        if(i%3=3D=3D0 &amp;&amp; i%5=3D=3D0){
+            sumBoth+=3Darr[i];
+        }else if(i%3=3D=3D0){
+            sum3+=3Darr[i];
+        }else if(i%5=3D=3D0){
+            sum5+=3Darr[i];
+        }
+    }
+    int total=3DsumBoth+sum3+sum5;
+    cout&lt;&lt;&quot;patasxany &quot;&lt;&lt;total;
+   =20
+    delete[] arr;
+    arr=3Dnullptr;
+
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 NxM =D5=B9=D5=A1=D6=83=D5=A1=D5=
+=B6=D5=AB =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =D5=A9=D5=BE=D5=A5=D6=80=D5=
+=AB=D6=81 =D5=A2=D5=A1=D5=B2=D5=AF=D5=A1=D6=81=D5=A1=D5=AE =D5=B4=D5=A1=D5=
+=BF=D6=80=D5=AB=D6=81=D6=89 =D4=B3=D6=80=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=
+=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8 =D5=AF=D5=B0=D5=A1=D5=B7=D5=BE=D5=AB =
+=D5=B4=D5=A1=D5=BF=D6=80=D5=AB=D6=81=D5=B8=D6=82=D5=B4 =D5=A6=D5=B8=D6=82=
+=D5=B5=D5=A3 =D5=BF=D5=A1=D6=80=D6=80=D5=A5=D6=80=D5=AB =D6=84=D5=A1=D5=B6=
+=D5=A1=D5=AF=D5=A8=D6=89</h2></div><div style=3D"padding: 0 12px;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;io=
+stream&gt;
+using namespace std;
+
+int zuygHashvox(int matrix[][100],int N,int M){
+    int qanak=3D0;
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M;j++){
+            if(matrix[i][j]%2=3D=3D0){
+                qanak++;
+            }
+        }
+    }
+    return qanak;
+}
+
+int main()
+{
+    int N,M;
+    cout&lt;&lt;&quot;mutqagreq matrix-i toxeri ev syuneri qanaky &quot;;
+    cin&gt;&gt;N&gt;&gt;M;
+
+    int matrix[100][100];
+   =20
+    if(N&lt;=3D0 || M&lt;=3D0){
+        cout&lt;&lt;&quot;sxal&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M;j++){
+            cout&lt;&lt;&quot;mutqagreq arjeqnery &quot;;
+            cin&gt;&gt;matrix[i][j];
+        }
+    }
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M;j++){
+            cout&lt;&lt;matrix[i][j];
+        }
+        cout&lt;&lt;endl;
+    }
+   =20
+    int patasxan =3DzuygHashvox(matrix,N,M);
+    cout&lt;&lt;&quot;zuygeri qanaky klini &quot;&lt;&lt;patasxan;
+   =20
+   =20
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 NxM =D5=B9=D5=A1=D6=83=D5=A1=D5=
+=B6=D5=AB =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =D5=A9=D5=BE=D5=A5=D6=80=D5=
+=AB=D6=81 =D5=A2=D5=A1=D5=B2=D5=AF=D5=A1=D6=81=D5=A1=D5=AE =D5=B4=D5=A1=D5=
+=BF=D6=80=D5=AB=D6=81=D6=89 =D4=B3=D6=80=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=
+=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8 =D5=B5=D5=B8=D6=82=D6=80=D5=A1=D6=84=D5=
+=A1=D5=B6=D5=B9=D5=B5=D5=B8=D6=82=D6=80 =D5=BF=D5=B8=D5=B2=D5=AB =D5=A3=D5=
+=AC=D5=AD=D5=A1=D5=BE=D5=B8=D6=80 =D5=A1=D5=B6=D5=AF=D5=B5=D5=B8=D6=82=D5=
+=B6=D5=A1=D5=A3=D5=AE=D5=AB =D5=BF=D5=A1=D6=80=D6=80=D5=AB =D5=A1=D6=80=D5=
+=AA=D5=A5=D6=84=D5=A8 =D5=AF=D6=83=D5=B8=D5=AD=D5=A1=D6=80=D5=AB=D5=B6=D5=
+=AB =D5=A1=D5=B5=D5=A4 =D5=BF=D5=B8=D5=B2=D5=AB =D5=BF=D5=A1=D6=80=D6=80=D5=
+=A5=D6=80=D5=AB =D5=A3=D5=B8=D6=82=D5=B4=D5=A1=D6=80=D5=B8=D5=BE=D6=89<br>=
+=D5=84=D5=A1=D5=BF=D6=80=D5=AB=D6=81=D5=AB =D5=A3=D5=AC=D5=AD=D5=A1=D5=BE=
+=D5=B8=D6=80 =D5=A1=D5=B6=D5=AF=D5=B5=D5=B8=D6=82=D5=B6=D5=A1=D5=A3=D5=AE=
+=D5=AB =D5=B4=D5=A1=D5=BD=D5=AB=D5=B6 =D5=BF=D5=A5=D5=B2=D5=A5=D5=AF=D5=B8=
+=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6 =D5=A3=D5=BF=D5=A5=D6=84 =D5=AB=D5=B6=
+=D6=84=D5=B6=D5=A5=D6=80=D5=A4=D6=89</h2></div><div style=3D"padding: 0 12p=
+x;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dot=
+ted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#in=
+clude &lt;iostream&gt;
+using namespace std;
+
+int rowsum(int matrix[][100], int rowindex, int K) {
+    int sum =3D 0;
+    for (int j =3D 0; j &lt; K; j++) {
+        sum +=3D matrix[rowindex][j];
+    }
+    return sum;
+}
+
+int main()
+{
+   int N,M;
+   cout&lt;&lt;&quot;mutqagreq N-y ev M-y &quot;;
+   cin&gt;&gt;N&gt;&gt;M;
+  =20
+   if(N&lt;=3D0 || M&lt;=3D0){
+       cout&lt;&lt;&quot;sxal&quot;&lt;&lt;endl;
+       return 0;
+   }
+  =20
+   int matrix[100][100];
+   cout&lt;&lt;&quot;mutqagreq arjeqnery &quot;;
+   for(int i=3D0;i&lt;N;i++){
+       for(int j=3D0;j&lt;M;j++){
+           cin&gt;&gt;matrix[i][j];
+       }
+   }
+  =20
+   int minNM =3D ( N &lt; M ) ? N : M;
+   for(int i=3D0;i&lt;minNM;i++){
+       matrix[i][i]=3Drowsum(matrix,i,M);
+   }
+  =20
+   cout&lt;&lt;&quot;popoxvac matrix&quot;;
+   for(int i=3D0;i&lt;N;i++){
+       for(int j=3D0;j&lt;M;j++){
+           cout&lt;&lt;matrix[i][j]&lt;&lt;&quot; &quot;;
+       }
+       cout&lt;&lt;endl;
+   }
+  =20
+       return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 NxM =D5=B9=D5=A1=D6=83=D5=A1=D5=
+=B6=D5=AB =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =D5=A9=D5=BE=D5=A5=D6=80=D5=
+=AB=D6=81 =D5=A2=D5=A1=D5=B2=D5=AF=D5=A1=D6=81=D5=A1=D5=AE =D5=B4=D5=A1=D5=
+=BF=D6=80=D5=AB=D6=81=D6=89 =D4=B3=D6=80=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=
+=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8 =D5=AF=D5=A3=D5=BF=D5=B6=D5=AB<br>=D5=
+=B4=D5=A1=D5=BF=D6=80=D5=AB=D6=81=D5=AB =D5=A3=D5=AC=D5=AD=D5=A1=D5=BE=D5=
+=B8=D6=80 =D5=A1=D5=B6=D5=AF=D5=B5=D5=B8=D6=82=D5=B6=D5=A1=D5=A3=D5=AE=D5=
+=AB=D6=81 =D5=BE=D5=A5=D6=80=D6=87 =D5=A5=D5=B2=D5=A1=D5=AE =D5=BF=D5=A1=D6=
+=80=D6=80=D5=A5=D6=80=D5=AB=D6=81 =D5=A1=D5=B4=D5=A5=D5=B6=D5=A1=D5=B4=D5=
+=A5=D5=AE=D5=A8=D6=89</h2></div><div style=3D"padding: 0 12px;"><div dir=3D=
+"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,=
+0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostr=
+eam&gt;
+using namespace std;
+int main()
+{
+    int N,M;
+    cout&lt;&lt;&quot;mutqagreq matrixi chapery &quot;;
+    cin&gt;&gt;N&gt;&gt;M;
+   =20
+    if(N&lt;=3D0 || M&lt;=3D0){
+        cout&lt;&lt;&quot;Sxal&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    int matrix[100][100];
+    cout&lt;&lt;&quot;mutqagreq arjeqnery &quot;;
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M;j++){
+            cin&gt;&gt;matrix[i][j];
+        }
+    }
+   =20
+    bool found=3Dfalse;
+    int maxAbove=3D0;
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3Di+1;j&lt;M;j++){
+            if(!found){
+                maxAbove=3Dmatrix[i][j];
+                found=3Dtrue;
+            }else if(matrix[i][j]&gt;maxAbove){
+                maxAbove=3Dmatrix[i][j];
+            }
+        }
+    }
+   =20
+    if(found){
+        cout&lt;&lt;&quot;amenamec arjeqy glxavor ankyunagcic verev &quot;&=
+lt;&lt;maxAbove&lt;&lt;&quot;-n e&quot;&lt;&lt;endl;
+    }else {
+        cout&lt;&lt;&quot;glxavor ankyunagcic verev voch mi tarr chka &quot=
+;&lt;&lt;endl;
+    }
+
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 s =D5=BF=D5=B8=D5=B2=D5=A8 =D6=87=
+ k =D5=A9=D5=AB=D5=BE=D5=A8 (1 &lt;=3D k &lt;=3D 26)=D6=89 <br>=D4=B3=D6=80=
+=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8 =D5=
+=AF=D5=AF=D5=B8=D5=A4=D5=A1=D5=BE=D5=B8=D6=80=D5=AB s =D5=BF=D5=B8=D5=B2=D5=
+=A8 =D4=BF=D5=A5=D5=BD=D5=A1=D6=80=D5=B5=D5=A1=D5=B6 k =D5=A1=D5=BB =D5=AF=
+=D5=B8=D5=A4=D5=A1=D5=BE=D5=B8=D6=80=D5=B4=D5=A1=D5=B4=D5=A2=D6=89</h2></di=
+v><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: p=
+re-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-=
+height: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    string s;
+    int K;
+    cout&lt;&lt;&quot;mutqagreq s toxy &quot;;
+    getline(cin,s);
+    cout&lt;&lt;&quot;mutqagreq K-n &quot;;
+    cin&gt;&gt;K;
+    if(K&lt;1 || K&gt;26){
+        cout&lt;&lt;&quot;sxal&quot;&lt;&lt;endl;
+        return 0;
+    }
+   =20
+    cout&lt;&lt;&quot;kesaryan aj kodavorvac texty: &quot;;
+   =20
+    for(int i=3D0;i&lt;s.length();i++){
+        char c=3Ds[i];
+   =20
+    if(isupper(c)){ //ete mecatar e=20
+        c=3Dchar((c-&#39;A&#39;+K)%26+&#39;A&#39;);
+    }else if(islower(c)){ //ete poqratar e
+        c=3Dchar((c-&#39;a&#39;+K)%26+&#39;a&#39;);
+    }
+        cout&lt;&lt;c;
+   } =20
+    cout&lt;&lt;endl;
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D5=8F=D6=80=D5=BE=D5=A1=D5=AE =D5=A7 NxM =D5=B9=D5=A1=D6=83=D5=A1=D5=
+=B6=D5=AB =D5=AB=D6=80=D5=A1=D5=AF=D5=A1=D5=B6 =D5=A9=D5=BE=D5=A5=D6=80=D5=
+=AB=D6=81 =D5=A2=D5=A1=D5=B2=D5=AF=D5=A1=D6=81=D5=A1=D5=AE =D5=B4=D5=A1=D5=
+=BF=D6=80=D5=AB=D6=81=D6=89 =D4=B3=D6=80=D5=A5=D5=AC =D5=AE=D6=80=D5=A1=D5=
+=A3=D5=AB=D6=80, =D5=B8=D6=80=D5=A8 =D5=AF=D5=B0=D5=A1=D5=B7=D5=BE=D5=AB =
+=D5=A3=D5=AC=D5=AD=D5=A1=D5=BE=D5=B8=D6=80 =D5=A1=D5=B6=D5=AF=D5=B5=D5=B8=
+=D6=82=D5=B6=D5=A1=D5=A3=D5=AE=D5=AB =D5=BE=D6=80=D5=A1 =D5=AF=D5=A1=D5=B4 =
+=D5=B6=D6=80=D5=A1=D5=B6=D5=AB=D6=81 =D5=B6=D5=A5=D6=80=D6=84=D6=87 =D5=A3=
+=D5=BF=D5=B6=D5=BE=D5=B8=D5=B2 =D5=A1=D5=B5=D5=B6 =D5=BF=D5=A1=D6=80=D6=80=
+=D5=A5=D6=80=D5=AB =D6=84=D5=A1=D5=B6=D5=A1=D5=AF=D5=A8, =D5=B8=D6=80=D5=B8=
+=D5=B6=D6=84 =D5=A3=D5=BF=D5=B6=D5=BE=D5=B8=D6=82=D5=B4 =D5=A5=D5=B6 [12.3;=
+ 34.1) =D5=B4=D5=AB=D5=BB=D5=A1=D5=AF=D5=A1=D5=B5=D6=84=D5=B8=D6=82=D5=B4=
+=D6=89</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D=
+"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 1=
+2px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int N,M;
+    cout&lt;&lt;&quot;Mutqagreq chapery &quot;;
+    cin&gt;&gt;N&gt;&gt;M;
+   =20
+    if(N&lt;=3D0 ||M&lt;=3D0){
+        cout&lt;&lt;&quot;sxal matrix &quot;&lt;&lt;endl;
+        return 0;
+    }
+    double matrix[100][100];
+    cout&lt;&lt;&quot;mutqagre arjeqnery &quot;;
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M;j++){
+            cin&gt;&gt;matrix[i][j];
+        }
+    }
+    double lower=3D12.3;
+    double higher=3D34.1;
+    int count=3D0;
+   =20
+    int limit =3D(N&lt;M) ? N:M;
+   =20
+    for(int i=3D0;i&lt;N;i++){
+        for(int j=3D0;j&lt;M &amp;&amp; j&lt;=3Di;j++){
+            double values=3Dmatrix[i][j];
+            if(values&gt;=3Dlower &amp;&amp; values&lt;34.1 ){
+                count++;
+            }
+        }
+    }
+    cout&lt;&lt;&quot;glxavor ankyunakci vra kam nranic nergev [&quot;&lt;&=
+lt;lower&lt;&lt;&quot;:&quot;&lt;&lt;higher&lt;&lt;&quot;) mijakayqum ka&qu=
+ot;&lt;&lt;count&lt;&lt;&quot; hat tiv&quot;&lt;&lt;endl;
+   =20
+     return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D4=B3=D6=80=D5=AB=D6=80 =D5=AE=D6=80=D5=A1=D5=A3=D5=AB=D6=80, =D5=B8=
+=D6=80=D5=A8=D5=9D<br><br>=D5=8D=D5=BF=D5=A1=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7=
+ n =D5=A1=D5=B4=D5=A2=D5=B8=D5=B2=D5=BB =D5=A9=D5=AB=D5=BE<br>=D4=B4=D5=AB=
+=D5=B6=D5=A1=D5=B4=D5=AB=D5=AF =D5=AF=D5=A5=D6=80=D5=BA=D5=B8=D5=BE =D5=BD=
+=D5=BF=D5=A5=D5=B2=D5=AE=D5=B8=D6=82=D5=B4 =D5=A7 =D5=A6=D5=A1=D5=B6=D5=A3=
+=D5=BE=D5=A1=D5=AE new =D6=85=D5=BA=D5=A5=D6=80=D5=A1=D5=BF=D5=B8=D6=80=D5=
+=B8=D5=BE<br>=D4=BC=D6=80=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 =D5=A7 =D5=A1=
+=D5=B5=D5=B6 =D6=85=D5=A3=D5=BF=D5=A1=D5=BF=D5=AB=D6=80=D5=B8=D5=BB =D5=B4=
+=D5=B8=D6=82=D5=BF=D6=84=D5=A1=D5=A3=D6=80=D5=A1=D5=AE =D5=A1=D6=80=D5=AA=
+=D5=A5=D6=84=D5=B6=D5=A5=D6=80=D5=B8=D5=BE<br>=D5=80=D5=A1=D5=B7=D5=BE=D5=
+=B8=D6=82=D5=B4 =D6=87 =D5=BF=D5=BA=D5=B8=D6=82=D5=B4 =D5=A7 =D5=B4=D5=AB=
+=D5=BB=D5=AB=D5=B6 =D5=A9=D5=BE=D5=A1=D5=A2=D5=A1=D5=B6=D5=A1=D5=AF=D5=A1=
+=D5=B6=D5=A8 ;<br>=D4=B1=D5=A6=D5=A1=D5=BF=D5=B8=D6=82=D5=B4 =D5=A7 =D5=B0=
+=D5=AB=D5=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=A8 de=
+lete[]-=D5=B8=D5=BE</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"a=
+uto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.=
+38);margin: 12px 0 8px; min-height: 20px;width: 100%;">#include &lt;iostrea=
+m&gt;
+using namespace std;
+
+int main()
+{
+    int n;
+    cout&lt;&lt;&quot;mutqagreq n-y &quot;;
+    cin&gt;&gt;n;
+   =20
+    int* arr=3Dnew int[n];
+    int sum=3D0;
+    cout&lt;&lt;&quot;mutqagreq arjeqnery &quot;;
+    for(int i=3D0;i&lt;n;i++){
+        cin&gt;&gt;arr[i];
+        sum+=3Darr[i];
+    }
+    int mijin=3Dsum/n;
+    cout&lt;&lt;&quot;mijin tvabanakany klini ` &quot;&lt;&lt;mijin&lt;&lt;=
+endl;
+   =20
+    delete[] arr;
+    arr=3Dnullptr;
+    return 0;
+}</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">=D4=B2=D5=A1=D6=81=D5=A1=D5=BF=D6=80=D5=AB=D6=80 =D5=BF=D5=A1=D6=80=D5=
+=A2=D5=A5=D6=80=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=A8=D5=9D<br><b=
+r>int* ptr;<br>const int* ptr;<br>int* const ptr;<br>const int* const ptr;<=
+/h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-=
+space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8=
+px; min-height: 20px;width: 100%;">int* ptr=E2=80=93 =D6=87 =D5=B0=D5=A1=D5=
+=BD=D6=81=D5=A5=D5=B6 =D6=87 =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8 =D5=AF=D5=
+=A1=D6=80=D5=B8=D5=B2 =D5=A5=D5=B6 =D6=83=D5=B8=D6=83=D5=B8=D5=AD=D5=BE=D5=
+=A5=D5=AC=D6=89
+const int* ptr=E2=80=93 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A7 =D6=83=D5=B8=
+=D5=AD=D5=A5=D5=AC =D5=B0=D5=A1=D5=BD=D6=81=D5=A5=D5=B6,=D5=A2=D5=A1=D5=B5=
+=D6=81 =D5=B9=D5=AB =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D6=83=D5=B8=D5=AD=D5=A5=
+=D5=AC =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8=D6=89
+int* const ptr- =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D5=A7 =D6=83=D5=B8=D5=AD=D5=
+=A5=D5=AC =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=A8 =D5=A2=D5=A1=D5=B5=D6=81 =D5=
+=B9=D5=AB =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D6=83=D5=B8=D5=AD=D5=A5=D5=AC =D5=
+=B0=D5=A1=D5=BD=D6=81=D5=A5=D5=B6=D6=89
+const int* const ptr=E2=80=93=D5=B8=D5=B9 =D5=A1=D6=80=D5=AA=D5=A5=D6=84=D5=
+=B6 =D5=A7 =D5=AF=D5=A1=D6=80=D5=B8=D5=B2 =D6=83=D5=B8=D5=AD=D5=A5=D5=AC =
+=D5=B8=D5=B9 =D5=A7=D5=AC =D5=B0=D5=A1=D5=BD=D6=81=D5=A5=D6=89
+</div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12=
+px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-b=
+ottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"col=
+or: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px=
+;">=D4=BB=D5=9E=D5=B6=D5=B9 =D5=A7 =D5=BF=D5=A5=D5=B2=D5=AB =D5=B8=D6=82=D5=
+=B6=D5=A5=D5=B6=D5=B8=D6=82=D5=B4, =D5=A5=D6=80=D5=A2 =D6=85=D5=A3=D5=BF=D5=
+=A1=D5=A3=D5=B8=D6=80=D5=AE=D5=B8=D6=82=D5=B4 =D5=A5=D5=B6=D6=84 new =D6=87=
+ delete =D6=85=D5=BA=D5=A5=D6=80=D5=A1=D5=BF=D5=B8=D6=80=D5=B6=D5=A5=D6=80=
+=D5=A8=D6=89<br>=D5=86=D5=B7=D5=AB=D6=80=D5=9D<br><br>=D5=88=D6=80=D5=BF=D5=
+=A5=D5=B2 =D5=A7 =D5=BA=D5=A1=D5=B0=D5=BE=D5=B8=D6=82=D5=B4 =D5=B0=D5=AB=D5=
+=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=A8 (stack vs h=
+eap)<br>=D4=BB=D5=B6=D5=B9=D5=B8=D6=82 =D5=A7 =D5=AF=D5=A1=D6=80=D6=87=D5=
+=B8=D6=80 =D5=A1=D5=A6=D5=A1=D5=BF=D5=A5=D5=AC =D5=B0=D5=AB=D5=B7=D5=B8=D5=
+=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=A8</h2></div><div style=3D=
+"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;wi=
+dth: 100%;">int* arr =3D new int[n];
+new-=D5=B8=D5=BE =D5=B0=D5=A1=D5=B4=D5=A1=D5=AF=D5=A1=D6=80=D5=A3=D5=A8 =D5=
+=B0=D5=AB=D5=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6 =D5=
+=A7 =D5=B0=D5=A1=D5=BF=D5=AF=D5=A1=D6=81=D5=B6=D5=B8=D6=82=D5=B4 Heap-=D5=
+=B8=D6=82=D5=B4 n =D5=A9=D5=BE=D5=AB =D5=B0=D5=A1=D5=B4=D5=A1=D6=80=D6=89
+=D5=8E=D5=A5=D6=80=D5=A1=D5=A4=D5=A1=D6=80=D5=B1=D5=B6=D5=B8=D6=82=D5=B4 =
+=D5=A7 =D5=A1=D5=B5=D5=A4 =D5=B6=D5=B8=D6=80 =D5=B0=D5=AB=D5=B7=D5=B8=D5=B2=
+=D5=B8=D6=82=D5=A9=D5=B5=D5=A1=D5=B6 =D5=B0=D5=A1=D5=BD=D6=81=D5=A5=D5=B6,=
+=D5=B8=D6=80=D5=A8 =D5=BA=D5=A1=D5=B0=D5=BE=D5=B8=D6=82=D5=B4 =D5=A7 =D6=81=
+=D5=B8=D6=82=D6=81=D5=AB=D5=B9=D5=AB =D5=B4=D5=A5=D5=BB(arr):
+=D4=B1=D5=B5=D5=BD =D5=B0=D5=AB=D5=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=
+=D5=B8=D6=82=D5=B6=D5=A8 =D5=BE=D5=A1=D5=BE=D5=A5=D6=80 =D5=A7 =D5=B4=D5=B6=
+=D5=B8=D6=82=D5=B4 =D5=A1=D5=B5=D5=B6=D6=84=D5=A1=D5=B6 =D5=AA=D5=A1=D5=B4=
+=D5=A1=D5=B6=D5=A1=D5=AF =D5=B4=D5=AB=D5=B6=D5=B9=D6=87 delete[] =D5=A1=D5=
+=B6=D5=A5=D5=B6=D6=84=D6=89
+Delete[]-=D5=A8 =D5=A1=D5=A6=D5=A1=D5=BF=D5=B8=D6=82=D5=B4 =D5=A7 new =E2=
+=80=93=D5=B8=D5=BE =D5=B0=D5=A1=D5=BF=D5=AF=D5=A1=D6=81=D5=BE=D5=A1=D5=AE =
+=D5=B0=D5=AB=D5=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=B8=D6=82=D5=B6=D5=
+=A8=D6=89
+=D4=B5=D5=A9=D5=A5 delete[] =D5=B9=D5=A1=D6=80=D5=BE=D5=AB =D5=BF=D5=A5=D5=
+=B2=D5=AB =D5=AF=D5=B8=D6=82=D5=B6=D5=A5=D5=B6=D5=A1 =D5=B0=D5=AB=D5=B7=D5=
+=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=A1=D5=B6 =D5=AF=D5=B8=D6=80=D5=B8=D6=
+=82=D5=BD=D5=BF (memory leak):
+delete[] =D5=A1=D5=B6=D5=A5=D5=AC=D5=A8 =D5=AF=D5=A1=D6=80=D6=87=D5=B8=D6=
+=80 =D5=A7 =D5=B6=D6=80=D5=A1 =D5=B0=D5=A1=D5=B4=D5=A1=D6=80 =D5=B8=D6=80=
+=D5=BA=D5=A5=D5=BD=D5=A6=D5=AB =D5=B9=D5=A1=D5=BC=D5=A1=D5=BB=D5=A1=D5=B6=
+=D5=A1 =D5=B0=D5=AB=D5=B7=D5=B8=D5=B2=D5=B8=D6=82=D5=A9=D5=B5=D5=A1=D5=B6 =
+=D5=AF=D5=B8=D6=80=D5=B8=D6=82=D5=BD=D5=BF ,=D5=A1=D5=B5=D5=BD=D5=AB=D5=B6=
+=D6=84=D5=B6 =D5=A5=D5=A9=D5=A5 =D5=B6=D5=B8=D6=82=D5=B5=D5=B6=D5=AB=D5=BD=
+=D5=AF =D5=A1=D5=B5=D5=B6 =D5=B9=D6=85=D5=A3=D5=BF=D5=A1=D5=A3=D5=B8=D6=80=
+=D5=AE=D5=BE=D5=AB =D5=B4=D5=AB=D6=87=D5=B6=D5=B8=D6=82=D5=B6 =D5=A7 =D5=AF=
+=D5=BA=D5=A1=D5=B0=D5=BE=D5=AB=D6=89
+=D4=BE=D6=80=D5=A1=D5=A3=D5=AB=D6=80=D5=A8 =D5=AF=D5=A4=D5=A1=D5=B6=D5=A4=
+=D5=A1=D5=B2=D5=AB=D6=89
+=D4=B5=D5=BE =D5=B0=D5=B6=D5=A1=D6=80=D5=A1=D5=BE=D5=B8=D6=80 =D5=A7 =D5=A1=
+=D5=BC=D5=A1=D5=BB=D5=A1=D5=B6=D5=A1 =D5=A1=D5=B6=D5=BE=D5=BF=D5=A1=D5=B6=
+=D5=A3=D5=B8=D6=82=D5=A9=D5=B5=D5=A1=D5=B6 =D5=AD=D5=B6=D5=A4=D5=AB=D6=80=
+=D5=B6=D5=A5=D6=80=D6=89
+=D4=BB=D5=BD=D5=AF =D6=85=D6=80=D5=AB=D5=B6=D5=A1=D5=AF int n=3D5; =D6=83=
+=D5=B8=D6=83=D5=B8=D5=AD=D5=A1=D5=AF=D5=A1=D5=B6=D5=A8 =D5=BA=D5=A1=D5=B0=
+=D5=BE=D5=B8=D6=82=D5=B4 =D5=A7 stack-=D5=B8=D6=82=D5=B4=D6=89</div></div><=
+/div></div><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"max-width: 672px; min-width: 154px; border-collapse: separate; border-=
+spacing: 0 0.2em;" width=3D"100%" role=3D"presentation"><tbody><tr height=
+=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs.google.com/forms?us=
+p=3Dmail_form_link" style=3D"color: #424242; font-size: 13px;">Create your =
+own Google Form</a></td></tr><tr><td>Does this form look suspicious? <a hre=
+f=3D"https://drive.google.com/u/0/abuse?id=3DAKkXjoxwg-bBcj6IC_3HXnRO-UIy1l=
+qZOyIoKovSQmHY6ejxPfLGdVib31g9Y71Vmkb-wGqlwVaBSQfvj3dwDI0:0&amp;docurl=3Dht=
+tps://docs.google.com/forms/u/0/d/e/1FAIpQLSe8LZDvvQRgntDTrfB9eQVt8d_ht3D4M=
+17Epp_1x7i42Grplg/formResponse&amp;usp=3Dmail_receipt_abuse" target=3D"_bla=
+nk" style=3D"color: #424242; font-size: 13px;">Report</a></td></tr></tbody>=
+</table></div></body></html>
+--0000000000003a82fc0639052f8f--
